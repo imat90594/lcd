@@ -37,7 +37,7 @@ define('SECONDARY_DOMAIN','2_Enteprise');
 
 switch ($_SERVER['SERVER_NAME'])
 {
-	case "aviorcms":
+	case "lcdcms":
 		define('DOMAIN','2_Enterprise');
 		break;
 	

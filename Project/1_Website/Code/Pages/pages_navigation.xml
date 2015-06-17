@@ -21,103 +21,11 @@
 				<link_title>HOME</link_title>
 				<link_text>HOME</link_text>
 		</page>
-		
-		<page>
-				<page_id>company</page_id>
-				<url_name>company</url_name>
-				<link_title>Company</link_title>
-				<link_text>COMPANY</link_text>
-				<page>
-					<page_id>company_profile</page_id>
-					<url_name>company-profile</url_name>
-					<link_title>Company Profile</link_title>
-					<link_text>Company Profile</link_text>
-				</page>
-				<page>
-					<page_id>our_services</page_id>
-					<url_name>our-services</url_name>
-					<link_title>Our Services</link_title>
-					<link_text>Our Services</link_text>
-				</page>
-				<page>
-					<page_id>fleet_manned</page_id>
-					<url_name>fleet-manned</url_name>
-					<link_title>Fleet Manned</link_title>
-					<link_text>Fleet Manned</link_text>
-				</page>
-				<page>
-					<page_id>accreditations</page_id>
-					<url_name>accreditations</url_name>
-					<link_title>Accreditations</link_title>
-					<link_text>Accreditations</link_text>
-				</page>
-				<page>
-					<page_id>quality_policy</page_id>
-					<url_name>quality-policy</url_name>
-					<link_title>Quality Policy</link_title>
-					<link_text>Quality Policy</link_text>
-				</page>
-				<page>
-					<page_id>avior_standards</page_id>
-					<url_name>avior-standards</url_name>
-					<link_title>Avior Standards</link_title>
-					<link_text>Avior Standards</link_text>
-				</page>
-				<page>
-					<page_id>links_downloads</page_id>
-					<url_name>links-downloads</url_name>
-					<link_title>Links and Downloads</link_title>
-					<link_text>Links and Downloads</link_text>
-				</page>
-		</page>
-		
-		<page>
-				<page_id>news</page_id>
-				<url_name>news</url_name>
-				<link_title>News</link_title>
-				<link_text>NEWS</link_text>
-		</page>
-		<page>
-				<page_id>csr</page_id>
-				<url_name>csr</url_name>
-				<link_title>csr</link_title>
-				<link_text>CSR</link_text>
-		</page>
-		<page>
-				<page_id>seafarers</page_id>
-				<url_name>seafarers</url_name>
-				<link_title>seafarers</link_title>
-				<link_text>Seafarers</link_text>
-		</page>
-		<page>
-				<page_id>gallery</page_id>
-				<url_name>gallery</url_name>
-				<link_title>Gallery</link_title>
-				<link_text>GALLERY</link_text>
-		</page>
-		<page>
-				<page_id>contact</page_id>
-				<url_name>contact</url_name>
-				<link_title>Contact</link_title>
-				<link_text>CONTACT</link_text>
-		</page>
-		<page>
-				<page_id>careers</page_id>
-				<url_name>careers</url_name>
-				<link_title>Careers</link_title>
-				<link_text>CAREERS</link_text>
-		</page>
 		<page>
 				<page_id>hotels</page_id>
 				<url_name>hotels</url_name>
 				<link_title>hotels</link_title>
 				<link_text>Hotels</link_text>
-		</page>
-		<page>
-				<page_id>accessibility</page_id>
-				<url_name>accessibility</url_name>
-				<link_title>accessibility</link_title>
-				<link_text>Accessibility</link_text>
 		</page>
 		
 	</navigation_group>
