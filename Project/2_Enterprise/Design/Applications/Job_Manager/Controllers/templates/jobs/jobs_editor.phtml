@@ -1,0 +1,61 @@
+<div id="job_editor" class="fleft pVl pRl pLm" style="color:black;">
+	<div class="pBxxl">
+		<?if ($this->job != NULL):?>
+		<form method="POST" action="/<?php echo routes::getInstance()->getCurrentTopLevelURLName();?>/jobs/edit">
+			<input type="hidden" name="job_id" value="<?php echo $this->job->job_id?>" />
+			
+			<div class="clearfix pTm">
+				<span class="fc_starfish_gray9 fwB">Job Title</span>
+				<div class="editable pos_rel pBxs hAuto fright">
+					<input maxlength="45" class="pHs w100 expand25-250 text applyOnlineFunc" name="job_title" placeholder="Place title here" value="<?=$this->job->job_title;?>">
+				</div>
+			</div>
+			
+			<div class="clearfix pTm">
+				<span class="fc_starfish_gray9 fwB fleft">Publish</span>
+				<div class="editable pos_rel pBxs hAuto fleft">
+					<select name="is_published" class="pubAndUnpub">
+						<option <?php echo ($this->job->is_published == 1) ? "selected" : ""?> value="1">Publish</option>
+						<option <?php echo ($this->job->is_published == 0) ? "selected" : ""?> value="0">Unpublish</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="clearfix pTm">
+				<span class="fc_starfish_gray9 fwB">Email Receiver</span>
+				<div class="editable pos_rel pBxs hAuto fright">
+					<input class="pHs w100 expand25-250 validate[required] tagInput" type="text" name="email_receiver" value="<?=$this->job->email_receiver;?>">
+				</div>
+			</div>
+			
+			<div class="clearfix pTm">
+				<span class="fc_starfish_gray9 fwB fleft">Permalink</span>
+				<div class="editable pos_rel pBxs hAuto fleft permaBox">
+					<input class="pHs w100 expand25-250 text validate[required]" type="text" name="job_permalink" value="<?=$this->job->job_permalink;?>">
+				</div>
+			</div>
+			
+			<div class="clearfix pTm">
+				<span class="fc_starfish_gray9 fwB fleft">Metadata</span>
+				<div class="editable pos_rel pBxs hAuto fleft jobMetaBox">
+					<input class="pHs w100 expand25-250 text validate[required]" type="text" name="job_metadata" value="<?=$this->job->job_metadata;?>">
+				</div>
+			</div>
+			
+			<textarea class='editor mTxl' name="job_description"><?=$this->job->job_description?></textarea>
+
+			<div class="mVxl">
+				
+				
+				<span data-toggle="modal" data-target="#deletejob" class="sprite deleteJob fright pointer mTs btn btn-default" data-job_id="<?php echo $this->job->job_id?>">Delete</span>
+				
+				
+				<input class ="sprite fright pointer mTs mRxl btn btn-default" type="submit" name="edit_job"  />
+			</div>
+		</form>
+		
+		<?else:?>
+			<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Job to display.</div>
+		<?endif;?>
+	</div>
+</div>

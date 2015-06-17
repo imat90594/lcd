@@ -1,0 +1,229 @@
+<br />
+<br />
+<?php $applicants = $this->today_applicants?>
+<div class="row">
+	<div class="col-xs-2">
+		<span>Name</span>
+	</div>
+	<div class="col-xs-2">
+		<span>Ship Type</span>
+	</div>
+	<div class="col-xs-2">
+		<span>Rank</span>
+	</div>
+	<div class="col-xs-2">
+		<span>Preferred Salary</span>
+	</div>
+	<div class="col-xs-2">
+		<span>Date Applied</span>
+	</div>
+	<div class="col-xs-2">
+		<span>Downloads</span>
+	</div>
+</div>
+<br />
+
+<style>
+.listContainer:nth-of-type(odd)  {
+	background: #e0e0e0;
+}
+.listContainer div{
+	padding: 7px;
+}
+.row {
+margin:0px;
+}
+</style>
+
+
+<div class="row mBl">
+<h4 id="today" class="pointer mBs">Today</h4>
+	<div id="todayList" class="listWrapper hide">
+		<?php if($applicants):?>
+		<?php foreach($applicants as $applicant):?>
+		<?php $data = json_decode($applicant->applicant_details, TRUE)?>
+		<div class="row listContainer">
+			<div class="col-xs-2">
+				<span><?php echo $data["first_name"]?> <?php echo $data["last_name"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["preferred_ship_type"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["rank_applied"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["salary_expectation"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo date("Y-m-d", strtotime($applicant->date_applied))?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><a href="/cv-manager/cv/downloadCV/id/<?php echo $applicant->applicant_id?>">Download</a></span>
+			</div>
+		</div>
+		<?php endforeach?>
+		<?php endif?>
+	</div>
+</div>
+
+
+<?php $applicants = $this->this_week_applicants?>
+
+<div class="row mBl">
+<h4 id="thisWeek" class="pointer mBs">This week</h4>
+	<div id="thisWeekList" class="listWrapper hide">
+		<?php if($applicants):?>
+		<?php foreach($applicants as $applicant):?>
+		<?php $data = json_decode($applicant->applicant_details, TRUE)?>
+		<div class="row listContainer">
+			<div class="col-xs-2">
+				<span><?php echo $data["first_name"]?> <?php echo $data["last_name"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["preferred_ship_type"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["rank_applied"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["salary_expectation"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo date("Y-m-d", strtotime($applicant->date_applied))?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><a href="/cv-manager/cv/downloadCV/id/<?php echo $applicant->applicant_id?>">Download</a></span>
+			</div>
+		</div>
+		<?php endforeach?>
+		<?php endif?>
+	</div>
+</div>
+
+
+<?php $applicants = $this->this_month_applicants?>
+
+
+<div class="row mBl">
+<h4 id="thisMonth" class="pointer mBs">This month</h4>
+	<div id="thisMonthList" class="listWrapper hide">
+		<?php if($applicants):?>
+		<?php foreach($applicants as $applicant):?>
+		<?php $data = json_decode($applicant->applicant_details, TRUE)?>
+		<div class="row listContainer">
+			<div class="col-xs-2">
+				<span><?php echo $data["first_name"]?> <?php echo $data["last_name"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["preferred_ship_type"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["rank_applied"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["salary_expectation"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo date("Y-m-d", strtotime($applicant->date_applied))?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><a href="/cv-manager/cv/downloadCV/id/<?php echo $applicant->applicant_id?>">Download</a></span>
+			</div>
+		</div>
+		<?php endforeach?>
+		<?php endif?>
+	</div>
+</div>
+
+<?php $applicants = $this->last_month_applicants?>
+
+<div class="row mBl">
+<h4 id="lastMonth" class="pointer mBs">Last Month</h4>
+	<div id="lastMonthList" class="listWrapper hide">
+		<?php if($applicants):?>
+		<?php foreach($applicants as $applicant):?>
+		<?php $data = json_decode($applicant->applicant_details, TRUE)?>
+		<div class="row listContainer">
+			<div class="col-xs-2">
+				<span><?php echo $data["first_name"]?> <?php echo $data["last_name"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["preferred_ship_type"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["rank_applied"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["salary_expectation"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo date("Y-m-d", strtotime($applicant->date_applied))?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><a href="/cv-manager/cv/downloadCV/id/<?php echo $applicant->applicant_id?>">Download</a></span>
+			</div>
+		</div>
+		<?php endforeach?>
+		<?php endif?>
+	</div>
+</div>
+
+
+<?php $applicants = $this->older_applicants?>
+
+<div class="row mBl">
+<h4 id="older" class="pointer mBs">Older applicants</h4>
+	<div id="olderList" class="listWrapper hide">
+		<?php if($applicants):?>
+		<?php foreach($applicants as $applicant):?>
+		<?php $data = json_decode($applicant->applicant_details, TRUE)?>
+		<div class="row listContainer">
+			<div class="col-xs-2">
+				<span><?php echo $data["first_name"]?> <?php echo $data["last_name"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["preferred_ship_type"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["rank_applied"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo $data["salary_expectation"]?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><?php echo date("Y-m-d", strtotime($applicant->date_applied))?></span>
+			</div>
+			
+			<div class="col-xs-2">
+				<span><a href="/cv-manager/cv/downloadCV/id/<?php echo $applicant->applicant_id?>">Download</a></span>
+			</div>
+		</div>
+		<?php endforeach?>
+		<?php endif?>
+	</div>
+</div>

@@ -1,0 +1,72 @@
+<?php
+$page_id = routes::getInstance()->getCurrentTopLevelPageID();
+?>
+<div id="articleListing" class="pVl pRl pLm">
+	<div class="row">
+		<div class="col-xs-2">
+			<h3><?php echo ucfirst($page_id); ?>(<?php echo count($this->articles); ?>)</h3>
+		</div>
+		<div class="col-xs-2 col-xs-offset-8">
+			<span id="addArticle" class="pointer plainbtn" data-toggle="modal" data-target="#addArticlePopup"><span class="glyphicon glyphicon-plus mRs"></span>Add <?php echo ucfirst($page_id);?></span>
+		</div>
+	</div>
+	<div class="row mTxl clearfix">
+		<div class="col-xs-12">
+			<table id="blogEntries">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Category</th>
+						<th>Status</th>
+					</tr>
+					<tr data-page="search">
+						<th><input type="text" name="article_title" placeholder="Search Title" value="<?php echo $this->checkValue('article_title'); ?>"/></th>
+						<th class="<?php echo $category_hidden == 1? "hide":""; ?>">
+							<?php $article_categories = $this->categories; ?>
+							<select name="article_category_id">
+								<option value="">Select One</option>
+								<?php if(count($article_categories) > 0) : ?>
+									<?php $article_category_id = $this->checkValue('article_category_id'); ?>
+									<?php foreach($article_categories as $article_category) : ?>
+										<?php if($article_category_id == $article_category->article_category_id) : ?>
+											<option selected value="<?php echo $article_category->article_category_id; ?>"><?php echo $article_category->category_name; ?></option>
+										<?php else : ?>
+											<option value="<?php echo $article_category->article_category_id; ?>"><?php echo $article_category->category_name; ?></option>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								<?php endif; ?>
+							</select>
+						</th>
+						<th>
+							<select name="is_publish">
+								<option value="">Select One</option>
+								<?php $is_publish = $this->checkValue('is_publish'); ?>
+								<option value="0" <?php echo $is_publish == "0"? "selected":""; ?>>Unpublished</option>
+								<option value="1" <?php echo $is_publish == "1"? "selected":""; ?>>Published</option>
+							</select>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php if($this->articles):?>
+					<?php foreach($this->articles as $article):?>
+					<tr>
+						<td><a href="/<?php echo routes::getInstance()->getCurrentTopLevelURLName()?>/content/view/<?php echo $article["article_id"]?>" title="<?php echo $article["article_title"]?>"><span class="glyphicon glyphicon-link mRs"></span><?php echo $this->shorten_string($article["article_title"], 4)?></a></td>
+						<td><?php echo $article["category_name"]?></td>
+						<td><?php echo ($article["is_publish"] != 1) ? "Unpublish" : "Publish"?></td>
+						<?php if (!$page_id == 'team') : ?>
+							<td><?php echo date("Y-m-d", $article["date_created"])?></td>
+						<?php endif; ?>
+					</tr>
+					<?php endforeach?>
+					<?php endif?>
+				</tbody>
+			</table>
+			<?php if($this->total_articles > 10) : ?>
+				<div class="pagination fs-10">
+					<?php echo $this->pagination?>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+</div>

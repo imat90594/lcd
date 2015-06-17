@@ -1,0 +1,55 @@
+<?php $comment_details = $this->comment_details; ?>
+<div id="">
+	<form method="POST" action="/<?php echo routes::getInstance()->getCurrentTopLevelURLName();?>/comment/update">
+		<input type="hidden" name="article_comment_id" value="<?php echo $comment_details["article_comment_id"];?>" />
+		<div id="editorContainer">
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Author</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<input type="text" name="author" class="longInput" value="<?php echo $comment_details["author"];?>" />
+				</div>
+			</div>
+
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Email</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<input type="text" name="email" value="<?php echo $comment_details["email"];?>" />
+				</div>
+			</div>
+			
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Date Posted</span> 
+				</div>
+				<div class="col-xs-10">
+					<input type="text" class="datepicker" data-date-format="yyyy/mm/dd" name="date_created" value="<?php echo date("Y/m/d", $comment_details["date_created"]);?>" />
+				</div>
+			</div>
+		
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Content</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<textarea class="editor" name="content">
+						<?php echo $comment_details["content"]; ?>
+					</textarea>
+				</div>
+			</div>
+			
+			<div class="clearfix mVxl row">
+				<div class="col-xs-3 col-xs-offset-9">
+					<input type="submit" class="btn" name="update" value="Save" />
+					<span class="gray-delete icon pointer deleteComment btnRed" data-article_comment_id="<?php echo $comment_details["article_comment_id"]?>" data-toggle="modal" data-target="#deleteCommentPopup">
+						Delete
+					</span>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+

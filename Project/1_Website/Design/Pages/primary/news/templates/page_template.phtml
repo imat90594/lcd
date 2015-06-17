@@ -1,0 +1,70 @@
+<div id="container">
+  		<div id="left"></div>
+
+  	<header style=" background:url('<?php echo "/Data/Images/".$this->_XMLObj->image[0]->path?>') no-repeat">
+    	<div class="overlay"></div>
+  	</header>
+
+  	<div id="middle">
+		<div class="header">
+			<p><?php echo $this->displayElement("page_banner_title")?></p>
+      	</div>
+        
+    	<div class="breadcrumb">
+        	<span class="breadcrumb-0 first">
+            	<a href="/">Home</a>
+            </span>
+            <span class="active">News</span>
+         </div>    
+         <section id="content">
+            <h1 class="page-title"><?php echo $this->displayElement("page_title")?></h1>
+        		<div class="region region-content">
+    				<div id="block-system-main" class="block block-system">
+  						<div class="content">
+							<div class="container-fluid buttonContainer">
+                                <h2 class="latestNews fleft">Latest News</h2>
+                                <h2><a class="fright archiveLink" href="/news/all">News Archive</a></h2>
+                            </div>
+						</div>
+					</div>
+                    <div class="container-fluid">
+                    	<?php foreach($this->articles as $articles):?>
+		                	<div id="" class="block block-views col-xs-4 col-md-4">
+		                    	<div class="content">
+		                        	<div class="view view-display-id-block view-dom-id-df30aaa6313325594ef54decfbdd5ea5">
+		                            	<div class="view-content">
+		                                	<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+		                                    	<div class="views-field views-field-field-picture">        
+		                                        	<div class="field-content">
+		                                            	<a href="/news/view/<?php echo $articles["permalink"]?>?back=<?php echo $_SERVER["REQUEST_URI"]?>" style="background-image:url('<?php echo $articles["image_path"]?>');"> </a>
+		                                            </div>  
+		                                        </div>  
+		                                        <div class="views-field views-field-title">        
+		                                        	<h2 class="field-content">
+		                                            	<a href="/news/view/<?php echo $articles["permalink"]?>?back=<?php echo $_SERVER["REQUEST_URI"]?>"><?php echo $articles["article_title"]?></a>
+		                                            </h2>  
+		                                        </div>  
+		                                        <div class="views-field views-field-created">
+		                                        	<span class="views-label views-label-created">DATE PUBLISHED</span>    
+		                                        	<span class="field-content"><?php echo date("d-m-y", $articles["date_created"])?></span>
+		                                        </div>
+		                                        <div class="views-field views-field-body">
+		                                        	<div class="field-content">
+		                                        		<div class="ellipsis">
+		                                            		<?php echo $articles["content"];?> 
+		                                            	</div>
+		                                                	<a href="/news/view/<?php echo $articles["permalink"]?>?back=<?php echo $_SERVER["REQUEST_URI"]?>" class="views-more-link">Read More</a>
+		                                            </div>  
+		                                        </div>  
+		                                    </div>
+		                               </div> 
+		                            </div>
+		                        </div>
+		                    </div>
+		                <?php endforeach?>
+                    </div>
+				</div>
+			</section>
+		</div>
+	</div>
+

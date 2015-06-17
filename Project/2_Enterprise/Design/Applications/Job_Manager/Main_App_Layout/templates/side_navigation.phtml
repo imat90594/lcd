@@ -1,0 +1,21 @@
+
+<div class="pTl pLl pRl" id="heading">
+	<h3>Jobs(<?php echo count($this->jobs)?>)</h3>
+
+<a href="#" class="btn btn-default" data-toggle="modal" data-target="#addjob">+ Add New Job</a>
+
+</div>
+	<?php if($this->jobs): ?>
+		<div class="clearfix mTl" id="sideNavigation">
+			<ul class="unstyled clearfix sortable list" id="nav_list">
+			<?php foreach ($this->jobs as $job):?> 
+				<li style="cursor:move; padding:5px; margin-bottom:3px; border:1px solid rgb(126, 125, 130); background-color:#ccc; "  data-priority_number="<?php echo $job->priority_number;?>" data-job_id="<?php echo $job->job_id;?>">
+					<a class="item" href="/<?php echo routes::getInstance()->getCurrentTopLevelURLName();?>/jobs/view/<?php echo $job->job_id;?>">
+						<span class="category_nav pointer" id="<?php echo $job->job_id;?>"><?php echo $job->job_title;?></span>
+					</a>
+				</li>
+			<?php endforeach;?>
+			</ul>
+		</div>
+	<?php endif;?>
+		

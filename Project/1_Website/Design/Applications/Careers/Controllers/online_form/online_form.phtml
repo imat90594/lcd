@@ -1,0 +1,257 @@
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="clearfix">
+
+	<div id="middle">
+
+		<header style=" background:url('<?php echo "/Data/Images/".$this->_XMLObj->image[0]->path?>') no-repeat">
+			<div class="overlay"></div>
+		</header>
+
+ 
+		<div class="header">
+			<p></p>
+		</div>
+        
+		<div class="breadcrumb">
+			<span class="breadcrumb-0 first">
+				<a href="/">Home</a>
+			</span>
+			<span class="breadcrumb-1">
+				<a href="/careers" class="active">Careers</a>
+			</span>
+			<?php if($this->job):?>
+				<span class="active"><?php echo $this->job["job_title"]?></span>
+			<?php endif?>
+		</div>    
+
+		<section id="content">
+			<h1 class="page-title"></h1>
+				<div class="region region-content">
+					<div class="container-fluid">
+						<div class="block block-views col-xs-12 col-md-12">
+							<div class="content">
+								<div class="view view-display-id-block view-dom-id-df30aaa6313325594ef54decfbdd5ea5">
+									<div class="view-content">
+										<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+											<div class="views-field">
+												<div class="field-content">
+													<?php if($this->job):?>
+													<h1><?php echo $this->job["job_title"]?></h1>
+													<div class="jobDesc"><?php echo $this->job["job_description"]?></div>
+													<?php endif?>
+												</div>
+											</div>
+											<div class="views-field">
+												<div class="field-content">
+													<h2>
+														<?php if($this->job):?>
+															<?php echo $this->job["job_title"]?>
+														<?php else:?>
+															Online Application Form
+														<?php endif?>
+													</h2>
+													<p class="pLm">Note: Cells with (*) must be filled in. Type "N/A" if information is not applicable to you.</p>
+												</div>
+											</div>
+											<div class="fleft clearfix formWrap">
+												<form id="applicationForm" method="post" enctype="multipart/form-data" action="/careers/online-form/send" class="clearfix posRel application_form">
+												<input type="hidden" value='<?php echo $this->job["job_id"]?>' name="job_id" />
+												<div class="views-field borderContainer">
+													<div class="field-content">
+														<div class="formHead clearfix">
+															<h2 class="pTitle">Personal Information</h2>
+														</div>
+														<div class="formContainer">
+															<p id="errorMsg" class="red w">Please check if you completed the required* fields before proceeding</p>
+															<div class="clearfix">
+																<div id="photoField" class="clearfix">
+																	<div class="clearfix attachPhoto posRel from-group">
+																		<input type="text" id="fileVal" class="fleft form-control" readonly>
+																		<div id="dummyPhoto" class="fleft photoAttach pointer">
+																			<input type="file" id="photo" name="photo">
+																			<div id="thumb"></div>
+																		</div>
+																		<p class="fleft" id="error_photo" style="color:red"></p>
+																		<p class="fleft mLm">(Optional)</p>
+																	</div>
+																</div>
+															</div>
+															<div id="nameField" class="clearfix mVs posRel mTl form-group">
+																<input type="text" name="first_name" class="w269 mRs form-control required" placeholder="First name*" value="" />
+																<input type="text" name="middle_name" class="w269 mRs form-control required" placeholder="Middle name*" value="" />
+																<input type="text" name="last_name" class="w269 mRs form-control required" placeholder="Last name*"  value=""/>
+															</div>
+															<div id="birthField" class="w300 clearfix mVs fleft form-group">
+																<p class="fleft mRl"><span>Date of Birth*</span></p>
+																<?php dropdown_renderer::$year_start = 1950?>
+																<?php $class = array("months" => "w55 mRs required", "days" => "w50 mRs required", "years" => "w60 required")?>
+																<?php echo dropdown_renderer::makeDatePicker("date_of_birth", $class);?>
+															</div>
+															<div id="availableField" class="w300 clearfix mVs fleft form-group">
+																<?php dropdown_renderer::$year_start = 2014?>
+																<?php dropdown_renderer::$year_end   = 2040?>
+																<p class="fleft mRl"><span>Available From*</span></p>
+																<?php $class = array("months" => "w55 mRs displayInline required", "days" => "w50 mRs displayInline required", "years" => "w60 displayInline required")?>
+																<?php echo dropdown_renderer::makeDatePicker("available_date", $class);?>
+															</div>
+															<div id="addressField" class="clearfix mVs form-group">
+																<input type="text" name="address" class="w595 form-control required" placeholder="Address*" value=""/>
+															</div>
+															<div id="numberField" class="clearfix mVs form-group">
+																<input type="text" name="mobile_number" class="w290 fleft mRs form-control w412 required" placeholder="Mobile phone*" value=""/>
+																<input type="text" name="landline_number" class="w290 mRs form-control w412" placeholder="Landline phone" value=""/>
+															</div>
+															<div class="clearfix mVs form-group">
+																<input type="text" name="email" class="w290 fleft mRs required form-control w412" placeholder="Email Address*" value=""/>
+																<input type="text" name="confirm_email" class="w290 required form-control w412" placeholder="Confirm Email Address*" value=""/>
+															</div>
+															<div class="clearfix mVs form-group">
+																<input type="text" name="rank_applied" class="w290 fleft mRs form-control w412 required" placeholder="Rank Applied for*" value=""/>
+																<?php echo dropdown_renderer::makeCitizenshipPicker("nationality", "", "Filipino", "w290");?>
+															</div>
+															<div class="clearfix mVs form-group">
+																<input type="text" name="preferred_ship_type" class="w190 fleft mRs form-control w412" placeholder="Preferred Ship Type" value=""/>
+																<input type="text" name="salary_expectation" class="w190 fleft form-control w412" placeholder="Salary Expectations (USD)" value=""/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="views-field borderContainer mTl">
+													<div class="field-content">
+														<div class="formHead">
+															<h2 class="pTitle">Documents / Certification / Visa</h2>
+														</div>
+														<div class="formContainer">
+															<p id="errorMsg" class="red hide">Please check if you completed the required* fields before proceeding</p>
+															<div class="clearfix mVs">
+																<div id="passField" class="clearfix fleft w300 mRs form-group">
+																	<input type="text" name="passport_number" class="form-control w412 required" placeholder="Passport Number*" value="" />
+																</div>
+																<div id="passValidField" class="clearfix form-group w412 fleft">
+																	<p class="fleft mRs"><span>Valid Until*</span></p>
+																	<?php $class = array("months" => "mm w55 mRs form-control displayInline required", "days" => "dd w50 mRs form-control displayInline required", "years" => "yy form-control displayInline w60 required")?>
+																	<?php echo dropdown_renderer::makeDatePicker("passport_validity", $class);?>
+																</div>
+															</div>
+															<div class="clearfix mVs">
+																<div id="seabookField" class="clearfix fleft w300 mRs form-group">
+													 				<input type="text" name="seamans_number" class="w300 required form-control w412" placeholder="Seamanbook Number*" value="" />
+																</div>
+																<div id="seaValidField" class="clearfix form-group w412 fleft">
+																	<p class="fleft mRs"><span>Valid Until*</span></p>
+																	<?php $class = array("months" => "mm w55 mRs form-control displayInline required", "days" => "dd w50 mRs form-control displayInline required", "years" => "yy w60 form-control displayInline required")?>
+																	<?php echo dropdown_renderer::makeDatePicker("seamans_validity", $class);?>
+																</div>
+															</div>
+															<div class="clearfix mVs">
+																<div id="cocField" class="clearfix fleft w300 mRs form-group">
+																	<input type="text" name="coc_number" class="w200 mRs form-control displayInline required" placeholder="COC*" value="" />
+																	<select name="coc_level" class="w200 required form-control displayInline">
+																		<option value="" selected disabled>COC Level*</option>
+																		<option value="Management">Management</option>
+																		<option value="Operational">Operational</option>
+																		<option value="Support">Support</option>
+																		<option value="Cook">Cook</option>
+																	</select>
+																</div>
+																<div id="cocValidField" class="clearfix w280 fleft form-group w412">
+																	<p class="fleft mRs"><span>Valid Until*</span></p>
+																	<?php $class = array("months" => "mm w55 mRs form-control displayInline required", "days" => "dd w50 mRs form-control displayInline required", "years" => "yy w60 form-control displayInline required")?>
+																	<?php echo dropdown_renderer::makeDatePicker("coc_validity", $class);?>
+																</div>
+															</div>
+															<div class="clearfix mVs">
+																<div class="clearfix fleft w300 mRs form-group w412">
+																	<input type="text" name="us_visa" class="w300 form-control" placeholder="US Visa" value="" />
+																</div>
+																<div id="visaValidField" class="clearfix w280 fleft form-group w412">
+																	<p class="fleft mRs"><span>Valid Until&nbsp;&nbsp;</span></p>
+																	<?php $class = array("months" => "mm w55 mRs form-control displayInline", "days" => "dd w50 mRs form-control displayInline", "years" => "yy w60 form-control displayInline")?>
+																	<?php echo dropdown_renderer::makeDatePicker("us_visa_validity", $class);?>
+																</div>
+															</div>
+															<div class="clearfix mVs form-group">
+																<textarea name="additional_skills" class="form-control" placeholder="Additional skills / certifications / land based experience  (please mention if you think they are relevant to your application)"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="views-field borderContainer mTl">
+													<div class="field-content">
+														<div class="formHead clearfix">
+															<h2 class="pTitle">SEASERVICE (will be checked against SMB)* Please start with most recent contract first.</h2>
+														</div>
+														<div class="formContainer">
+															<?php dropdown_renderer::$year_start = 1970?>
+															<?php dropdown_renderer::$year_end   = 2040?>
+															<?php foreach(range(1 ,20) as $i):?>
+															<div data-ctr="<?php echo $i?>" class="serviceContainer clearfix <?php echo ($i == 1) ? "" : "hide"?>">
+																	<div class="clearfix">
+																		<div class="clearfix mVs form-group">
+																			<input type="text" name="service[<?php echo $i?>][ship_name]" class="w269 mRs form-control displayInline required" placeholder="Ship Name*" value="">
+																			<input type="text" name="service[<?php echo $i?>][ship_type]" class="w269 mRs form-control displayInline required" placeholder="Ship Type*" value="">
+																			<input type="text" name="service[<?php echo $i?>][grt]" class="w269 form-control displayInline required" placeholder="GRT" value="">
+																		</div>
+																		<div class="clearfix mVs form-group">
+																			<input type="text" name="service[<?php echo $i?>][rank]" class="w410 mRs form-control displayIb required" placeholder="Rank*" value="">
+																			<input type="text" name="service[<?php echo $i?>][flag]" class="w410 form-control displayIb required" placeholder="Flag*" value="">
+																		</div>
+																		<div class="clearfix mVs form-group">
+																			<input type="text" name="service[<?php echo $i?>][manning_agency]" class="w410 mRs form-control displayIb required" placeholder="Manning Agency*" value="">
+																			<input type="text" name="service[<?php echo $i?>][principal]" class="w410 form-control displayIb required" placeholder="Principal*" value="">
+																		</div>
+																		<div class="clearfix mVs form-group">
+																			<input type="text" name="service[<?php echo $i?>][engine_make]" class="w410 mRs form-control displayIb" placeholder="Engine Make (Engineers only)" value="">
+																			<input type="text" name="service[<?php echo $i?>][engine_kw]" class="w410 form-control displayIb" placeholder="Engine KW (Engineers only)" value="">
+																		</div>
+																		<div class="clearfix mVs">
+																			<div id="signOnField" class="clearfix w280 fleft mRs form-group w410">
+																				<p class="fleft mRs"><span>Sign on date*</span></p>
+																				<?php $class = array("months" => "mm w55 mRs form-control displayInline required", "days" => "dd w50 mRs form-control displayInline required", "years" => "yy w60 form-control displayInline required")?>
+																				<?php echo dropdown_renderer::makeCustomDatePicker("service[$i][from_date", $class);?>
+																			</div>
+																			<div id="signOffField" class="clearfix w280 fright form-group w410">
+																				<p class="fleft mRs"><span>Sign off date*</span></p>
+																				<?php $class = array("months" => "mm w55 mRs form-control displayInline required", "days" => "dd w50 mRs form-control displayInline required", "years" => "yy w60 form-control displayInline required")?>
+																				<?php echo dropdown_renderer::makeCustomDatePicker("service[$i][to_date", $class);?>
+																			</div>
+																		</div>
+																	<hr class="mVxl">
+																	</div>
+																</div>
+															<?php endforeach?>
+															<div><?php echo recaptcha_get_html(PUBLIC_KEY);?></div>
+														</div>
+													</div>
+												</div>
+												<div class="clearfix mTl fright">
+													<input id="submitApplication" class="ArvilSans button orangeButton pAs pointer mRm fright btn" type="submit" value="SUBMIT APPLICATION" data-toggle="modal" data-target="#processApp">
+													<span id="add_service" class="ArvilSans button blue pAsbutton pAs pointer mRm fright btn">&plus;ADD ANOTHER SEASERVICE</span>
+												</div>
+											</form>
+											<button class="hide" id="toggleSubmitConfirmation" data-toggle="modal" data-target="#processApplication">Submit</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+	
+	<?//php pop up dialogs?>
+	<div class="modal fade" id="processApplication" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+			<div class="processing gradient MyriadPro">
+				<p>Please wait while we are processing your information.</p>
+					
+				<p>Step 1: Personal Information</p><span id="step_1" class="load"></span>
+				<p>Step 2: Documents / Certification / Visa</p><span id="step_2" class="load"></span>
+				<p>Step 3: Sea Service</p><span id="step_3" class="load"></span>
+			</div>
+	    </div>
+	  </div>
+	</div>

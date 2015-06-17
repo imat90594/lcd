@@ -1,0 +1,66 @@
+<div id="container">
+  <div id="left">
+  </div>
+
+  <header style=" background:url('<?php echo "/Data/Images/".$this->_XMLObj->image[0]->path?>') no-repeat">
+    <div class="overlay"></div>
+  </header>
+
+  <div id="middle">
+     <div class="header">
+        <p><?php echo $this->displayElement("page_banner_title")?></p>
+     </div>
+        
+   	 <div class="breadcrumb">
+     	<span class="breadcrumb-0 first">
+        	<a href="/">Home</a>
+        </span>
+        <span class="breadcrumb-1">
+        	 <a href="/company" class="active">Company</a>
+        </span>
+        <span class="active">Links and Downloads</span>
+     </div>    
+     <section id="content">
+        <h1 class="page-title"><?php echo $this->displayElement("page_title")?></h1>      
+        <div class="region region-content">
+    		<div id="block-system-main" class="block block-system">
+  				<div class="content">
+    				<div id="node-153" class="node node-page clearfix">
+  						<div class="content">
+    						<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                            	<div class="field-items">
+                                	<div class="field-item even">
+                                    	<?php echo $this->displayElement("link_editor")?>
+									</div>
+                                 </div>
+                              </div>  
+                           </div>
+						</div>
+ 					 </div>
+				</div>
+  			</div>   
+        <div class="region region-content">
+    		<div id="block-system-main" class="block block-system">
+  				<div class="content">
+    				<div id="node-153" class="node node-page clearfix">
+  						<div class="content">
+    						<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                            	<div class="field-items">
+                                	<div class="field-item even">
+                                    	<?php echo $this->displayElement("download_editor")?>
+									</div>
+                                 </div>
+                              </div>  
+                           </div>
+						</div>
+ 					 </div>
+				</div>
+  			</div>
+    	</section>
+        <aside id="right">
+            %%SIDE_NAV%%
+    	</aside>
+  	</div>
+</div>
+
+

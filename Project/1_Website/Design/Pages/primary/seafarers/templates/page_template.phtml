@@ -1,0 +1,97 @@
+<div id="container" class="newsListing">
+  		<div id="left"></div>
+
+	  	<header style=" background:url('<?php echo "/Data/Images/".$this->_XMLObj->image[0]->path?>') no-repeat">
+	    	<div class="overlay"></div>
+	  	</header>
+
+  		<div id="middle">
+			<div class="header">
+				<p><?php echo $this->displayElement("page_banner_title")?></p>
+	      	</div>
+        
+	    	<div class="breadcrumb">
+	        	<span class="breadcrumb-0 first">
+	            	<a href="/">Home</a>
+	            </span>
+	            <span class="active breadcrumb-1"><a href="#">Seafarers</a></span>
+	         </div>    
+	         <section id="content">
+	            <h1 class="page-title"><?php echo $this->displayElement("page_title")?></h1>
+	        		<div class="region region-content">
+	    				<div id="block-system-main" class="block block-system">
+	  						<div class="content">
+								<div class="container-fluid buttonContainer">
+								<?php if(isset($url[5])):?>
+	                                <h2 class="latestNews fleft"><?php echo $url[5]." ".$url[4]?></h2>
+	                            <?php else:?>  
+	                            	<h1 class="page-title">All</h1>
+	                           	<?php endif?>
+	                            </div>
+							</div>
+						</div>
+	                    <div class="container-fluid">
+	                    	<div id="block-views-news-archive-block" class="block block-views">
+	                    		<div class="content">
+	                    			<div class="view view-news-archive view-id-news_archive view-display-id-block view-dom-id-68461913e500c175660f2198493cceea">
+	                   		 			<div class="view-content">
+	                    					<ul>
+	                    					<?php foreach($this->articles as $articles):?>
+	                    						<li class="views-row-odd views-row-first">
+	                    							<div class="views-field views-field-title">
+	                    								<h2 class="field-content">
+	                    									<a href="/seafarers/view/<?php echo $articles["permalink"]?>?back=<?php echo $_SERVER["REQUEST_URI"]?>"><?php echo $articles["article_title"]?></a>
+	                                                    </h2>  
+	                                                </div>  
+	                    							<div class="views-field views-field-created">
+	                                                    <span class="views-label views-label-created">DATE PUBLISHED</span>
+	                                                    <span class="field-content"><?php echo date("d-m-y", $articles["date_created"])?></span>
+	                                                </div>  
+	                    							<div class="views-field views-field-body">
+	                                                    <div class="field-content">
+	                                                    	<div class="contentEllipsis">
+	                                                         <?php echo $articles["content"];?> 
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                                <a href="/seafarers/view/<?php echo $articles["permalink"]?>?back=<?php echo $_SERVER["REQUEST_URI"]?>" class="views-more-link">Read More</a>
+	                                             </li>
+	                                             <?php endforeach?>
+	                    					</ul>
+	                    				</div>
+			                          	<div class="item-list">
+			                                <ul class="pager">
+			                                	<?php if($this->pagination):?>
+			                                    <li><?php echo $this->pagination?></li>
+			                                    <?php endif;?>
+			                                </ul>
+			                        	</div>  
+	                    			</div>
+	                      		</div>
+	                    	</div>
+	                    </div>
+					</div>
+				</section>
+				<aside id="right">
+	            <div class="region region-right">
+	        		<div id="block-menu-block-1" class="block block-menu-block">
+	  					<div class="content">
+	  					<?php if($this->articles):?>
+	  					<?php foreach($this->articles as $articles):?>
+	    					<div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-2">
+	  							<ul class="menu">
+                            		<li class="first leaf active-trail active menu-mlid-687">
+                                	   <a href="/seafarers/view/<?php echo $articles["permalink"]?>?back=<?php echo $_SERVER["REQUEST_URI"]?>" class="views-more-link"><?php echo $articles["article_title"]?></a>
+                                	</li>
+	                            </ul>
+	                        </div>
+	                    <?php endforeach;?>
+						<?php endif;?>
+	  					</div>
+					</div>
+	  			</div>
+	    	</aside>
+		</div>
+	</div>
+
+v>

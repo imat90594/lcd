@@ -1,0 +1,48 @@
+<!--ADD JOB POP UP-->
+
+
+<div class="modal fade in" id="addjob" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false"><div class="modal-backdrop fade in" style="height: 403px;"><div></div></div>
+  <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+       		<h4 class="modal-title fleft" id="myModalLabel">Add new Job</h4>
+       </div>
+       <div class="modal-body">
+       <form method="POST" name="add_job_form" action="/<?=routes::getInstance()->getCurrentTopLevelURLName()?>/jobs/add">
+			<div class="mBxl">
+				<span id="error" class="clearfix" style="color:red"></span>
+				<strong>Job Title</strong><input class="validate[required,maxlength[45]] fright subCategory_entityTitle" type="text" name="job_title" maxlength="45">
+			</div>
+			<div id="button_container" class="fright mRs mBs">
+				<input name="job_id" type="hidden" value="">
+				<input type="submit" class="sprite fleft mRs mTs" name="add_job" value="Add">
+				<span class="sprite mTs fleft pointer cancel" title="cancel"></span>
+			</div>
+		</form>
+       </div>
+       <div class="modal-footer">
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+
+<div class="modal fade in" id="deletejob" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false"><div class="modal-backdrop fade in" style="height: 403px;"><div></div></div>
+  <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+       		<h4 class="modal-title fleft" id="myModalLabel">Add new Job</h4>
+       </div>
+       <div class="modal-body">
+       <form method="POST" action="/<?=routes::getInstance()->getCurrentTopLevelURLName()?>/jobs/delete">
+			<input type="hidden" name="job_id" value="" />
+			<input class="sprite fleft delete_subcategory_confirm pointer mTs" title="Delete this job" type="submit" name="delete_product" value="Delete this job">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close</span></button>
+		</form>
+       </div>
+       <div class="modal-footer">
+       </div>
+     </div>
+   </div>
+ </div>

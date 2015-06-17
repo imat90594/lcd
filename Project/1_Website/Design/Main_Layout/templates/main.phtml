@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<?=metaData::getInstance()->getMetaData(); ?>
+		||global_javascript_top||
+		||local_javascript_top||
+		||global_css||
+		||local_css||	 	
+		
+		<script type="text/javascript">
+			%%GOOGLE_ANALYTICS%%
+		</script>
+</head>
+<body <?=$this->getIdForPage(); ?> itemscope itemtype="http://schema.org/WebPage" class="front no-sidebar-right no-sidebar-left no-mobile no-tablet desktop page-node node-1 node-type-page path-root-home path-home">
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	<!--[if lt IE 9]>
+		<div class="align_c mAuto">
+		<img alt="Starfish Internet Solutions" title="starfish web designer logo" src="/Project/1_Website/Design/Main_Layout/images/other/logo-lt-ie9.png"/>
+		<p><strong>starfi.sh</strong> is best viewed on <a href="http://www.microsoft.com/en-us/download/internet-explorer-9-details.aspx" target="_blank">Internet Explorer 9 and higher</a>. Our website is designed using HTML5 and CSS3 - the latest technologies in web development. Update your Internet Explorer to version 9 or higher, or switch to another browser such as <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>.</p>
+		</div>
+	<![endif]-->
+	<!--[if !IE | gt IE 8]><!-->
+<!-- 		<div id="preloader"> -->
+<!-- 			<div id="status"></div> -->
+<!-- 		</div> -->
+		<div id="wrapper">
+			%%HEADER_CONTENT%%
+			
+			<div id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
+				%%MAIN_CONTENT%%
+			</div>
+			
+			%%FOOTER_CONTENT%%
+		</div>
+	<!--<![endif]-->
+		||dialogues||
+		||global_javascript_bottom||
+		<script type="text/javascript">
+			//Cufon.now();
+			||local_javascript_bottom||
+		</script>
+</body>
+</html>

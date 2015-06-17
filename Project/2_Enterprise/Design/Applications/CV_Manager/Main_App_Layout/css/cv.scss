@@ -1,0 +1,51 @@
+/*********************************** ARTICLE CSS ***********************************/
+#cv_manager{
+  #outer_wrapper{
+    background-image:none!important;
+    #contentColumn{
+      width:100%;
+      padding:30px;
+      .listContent{
+        margin:5px 0;
+        h1{
+          font-size:18px;
+        }
+        h2{
+          font-size:16px;
+        }
+        h1,h2,p,span{
+          color: #333333;
+        }
+        ul.heading{
+          li{
+            padding:0px 38px 0 35px;
+            &:first-child{
+              padding:0px 120px 0 35px!important;
+            }
+          }
+        }
+        ul{
+          list-style:none;
+          padding:0;
+          float:left;
+          li{
+            float:left;
+            padding:0px 85px 0 35px;
+            &:first-child{
+              padding:0px 120px 0 35px;
+            }
+          }
+        }
+        .listWrapper{
+          .list{
+            padding:3px;
+            background-color:#F1F1F1;
+            &:nth-of-type(even){
+            background-color:#ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+}

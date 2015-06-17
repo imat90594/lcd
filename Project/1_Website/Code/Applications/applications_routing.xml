@@ -1,0 +1,35 @@
+<applications>
+	<application>
+	<application_id>Articles</application_id>
+	<requires_login>no</requires_login>
+	<floating_url_name>articles</floating_url_name>
+	<has_main_layout>yes</has_main_layout>
+		<controller default="true">
+			<controller_id>article</controller_id>
+			<url_name>article</url_name>
+			<link_text>article</link_text>
+		</controller>
+		<controller>
+			<controller_id>category</controller_id>
+			<url_name>category</url_name>
+			<link_text>category</link_text>
+		</controller>
+	</application>
+	
+	<application>
+		<application_id>Careers</application_id>
+		<floating_url_name>NOTUSED</floating_url_name>
+		<requires_login>no</requires_login>
+		<has_main_layout>yes</has_main_layout>
+		<controller default="true">
+			<controller_id>online_form</controller_id>
+			<url_name>online-form</url_name>
+			<link_text>Online Form</link_text>
+		</controller>
+	</application>
+	
+	
+	
+	
+	
+</applications>

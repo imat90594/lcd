@@ -1,0 +1,37 @@
+<?php $array_of_comments = $this->array_of_comments; ?>
+<div id="articleListing" class="pVl pRl pLm">
+	<div class="row">
+		<div class="col-xs-2">
+			<h3>Comments (<?php echo $this->total_comments; ?>)</h3>
+		</div>
+	</div>
+	<div class="row mTxl clearfix">
+		<div class="col-xs-12">
+			<table id="blogEntries">
+				<thead>
+				<tr>
+					<th>Comment</th>
+					<th>Author</th>
+					<th><?php echo ucfirst(routes::getInstance()->getCurrentTopLevelURLName()); ?></th>
+					<th>Date</th>
+				</tr>
+				</thead>
+				<tbody>
+				<?php if(count($array_of_comments) > 0):?>
+					<?php foreach($array_of_comments as $comment):?>
+						<tr>
+							<td><a href="/<?php echo routes::getInstance()->getCurrentTopLevelURLName()?>/comment/view/<?php echo $comment["article_comment_id"]?>" title="<?php echo $comment["article_title"]?>"><span class="glyphicon glyphicon-link mRs"></span><?php echo $this->shorten_string($comment["content"], 4)?></a></td>
+							<td><?php echo $comment["author"]?></td>
+							<td><?php echo $comment["article_title"]?></td>
+							<td><?php echo date("Y-m-d", $comment["date_created"])?></td>
+						</tr>
+					<?php endforeach?>
+				<?php endif?>
+				</tbody>
+			</table>
+			<div class="pagination fs-10">
+				<?php echo $this->pagination?>
+			</div>
+		</div>
+	</div>
+</div>

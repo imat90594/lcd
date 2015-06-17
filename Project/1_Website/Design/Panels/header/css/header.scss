@@ -1,0 +1,167 @@
+/************************************** HEADER **************************************/
+@import 'C:/WORKSPACE/clefsdor/Project/1_Website/Design/Main_Layout/scss/core/_global.scss';
+
+.navbar{
+  border-color:transparent !important;
+  border-width: 0 0 0px !important;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+
+.navbar-brand{
+  padding: 15px 0px !important;
+}
+
+.nav { margin-bottom: 0; }
+.nav > li.dropdown.open { position: static; }
+.nav > li.dropdown.open .dropdown-menu {display:table; text-align: center; left:0; right:0;max-height: 257px;}
+
+.header{
+  .top{
+    .navbar-toggle{
+      margin-top: 40px;
+    }
+    #srch-term, .input-group-btn{
+      background-color: transparent;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+      border-color:#F3C483;
+      color: #f3c483 !important;
+      &:focus{
+        border-color: none;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+      button{
+        background-color: transparent;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+        border-color:#F3C483;
+        color: #F3C483 !important;
+      }
+      font-family:'AmplitudeExtraComp-Medium_3552';
+      font-size:24px;
+    }
+  }
+  .navbar-nav{
+    float: none !important;
+    margin: 0 auto;
+    font-family:'AmplitudeExtraComp-Medium_3552';
+    font-size:28px;
+    li{
+      a{
+          padding: 10px 42px;
+          color:#5f3916 !important;
+          &:hover{
+            background-color:#603813 !important;
+            color:#f3c483 !important;
+          }
+      }
+      .dropdown-menu{
+        max-height: 220px;
+        border-top: 5px solid #603813;
+      }
+    }
+    .open{
+      .dropdown-toggle{
+        background-color:#603813 !important;
+        color:#f3c483 !important;
+      }
+    }
+  }
+  #bs-example-navbar-collapse-1{
+    background-color:#F1BC56; 
+    border-color:transparent !important;
+  }
+}
+.aboutUs, .members, .clefs, .guide, .press, .contact{
+  .dropdown-menu{
+    padding-top:0;
+    padding-bottom: 0;
+          .dropDownColor{
+            padding-left: 0;
+            padding-right: 0;
+            li{
+              list-style-type: none;
+              padding: 5px 20px;  
+              text-align:left;
+              padding-left: 15;
+              padding-right: 0;
+              border-bottom: 1px solid #603813;
+              a{
+                font-family:'AmplitudeExtraComp-Medium_3552';
+                font-size:25px;
+                padding: 10px 0px;
+                padding-bottom: 0px;
+                &:hover{
+                  color:#B58A2D !important;
+                  border-bottom:1px solid #B58A2D;
+                  background-color:transparent !important;
+                }
+              }
+            }
+          }
+          .rightContent{
+            padding-right: 80px;
+            h1{
+              font-family:'AmplitudeExtraComp-Medium_3552';
+              text-align: left;
+              font-size: 25px;
+              font-weight: lighter;
+              padding-top: 10px;
+              a{
+                padding:0;
+                background-color:white !important;
+                color:black !important;
+                &:hover{
+                  background-color:white !important;
+                  color:black !important;
+                }
+              }
+            }
+            hr{
+              margin: 0em 0;
+              background-color: #f1bc57;
+              height: 4px;
+              border: 0;
+              margin-bottom: 5px;
+            }
+            .ellipsis{  
+              height:160px;
+              overflow:hidden;
+              p{
+                color:#231F20;
+                font-family:'century-gothic-regular';
+                font-size:14px;
+                line-height:20px;
+                text-align:justify;
+              }
+            }
+            .imgContainer{
+              padding-top: 22px;
+            }
+          }
+          .leftContent{
+            background-color: #eee9d5;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height:257px;
+          }
+        }
+}
+
+
+.navbar-collapse{
+            max-height:210px !important;
+          }
+
+
+.active-trail{
+  background-color:#603813 !important;
+  color:#f3c483 !important;
+}

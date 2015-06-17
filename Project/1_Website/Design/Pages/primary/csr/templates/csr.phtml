@@ -1,0 +1,64 @@
+<div id="container">
+  		<div id="left"></div>
+
+  	<header style=" background:url('<?php echo "/Data/Images/".$this->_XMLObj->image[0]->path?>') no-repeat">
+    	<div class="overlay"></div>
+  	</header>
+
+  	<div id="middle">
+		<div class="header">
+			<p><?php echo $this->displayElement("page_banner_title")?></p>
+      	</div>
+        
+    	<div class="breadcrumb">
+        	<span class="breadcrumb-0 first">
+            	<a href="/">Home</a>
+            </span>
+            <span><a href="/scr">News</a></span>
+            <span class="active"><?php echo $this->article["article_title"]?></span>
+         </div>    
+         <section id="content">
+            <h1 class="page-title"><?php echo $this->displayElement("page_title")?></h1>
+        		<div class="region region-content">
+    				<div id="block-system-main" class="block block-system">
+  						<div class="content">
+							<div class="container-fluid buttonContainer">
+                                <h2 class="back fleft"><a href="<?php echo $_GET["back"]?>">< Back</a></h2>
+                                <h2 class="fright dateCreated"><?php echo date("m.d.Y",$this->article["date_created"])?></h2>
+                            </div>
+						</div>
+					</div>
+                    <div class="container-fluid">
+                    	<div id="" class="block block-views col-xs-12 col-md-12">
+		                    	<div class="content">
+		                        	<div class="view view-display-id-block view-dom-id-df30aaa6313325594ef54decfbdd5ea5">
+		                            	<div class="view-content">
+		                                	<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+		                                		<div class="views-field views-field-title">        
+		                                        	<h1 class="field-content pagr-title">
+		                                            	<?php echo $this->article["article_title"]?>
+		                                            </h1>  
+		                                        </div>  
+		                                    	<div class="views-field views-field-field-picture imageBannerContainer">        
+		                                        	<div class="field-content">
+		                                            	<div style="background:url('<?php echo $this->article["image_path"]?>');" id="imageBanner"></div>
+		                                            </div>  
+		                                        </div>  
+		                                        <div class="views-field views-field-body articleBody">
+		                                        	<div class="field-content">
+		                                            		<?php echo $this->article["content"]?> 
+		                                            </div>  
+		                                        </div>  
+		                                    </div>
+		                               </div> 
+		                            </div>
+		                        </div>
+		                    </div>
+                    </div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+

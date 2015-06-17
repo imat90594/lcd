@@ -1,0 +1,60 @@
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="pVl">
+	<div id="middle">
+		<div class="topSection clearfix align_c">
+		</div>
+	
+	  	<header class="careerHeader" style=" background:url('<?php echo "/Data/Images/".$this->_XMLObj->image[0]->path?>') no-repeat">
+	    	<div class="overlay"></div>
+	  	</header>
+	  	
+	  	<div class="header classHeader">
+			<p><?php echo $this->displayElement("page_banner_title")?></p>
+      	</div>
+	
+		<div class="breadcrumb">
+			<span class="breadcrumb-0 first">
+				<a href="/">Home</a>
+			</span>
+			<span class="active">Careers</span>
+		</div>
+		
+		<section id="content">
+			<h1 class="page-title">Careers</h1>
+			
+			<div class="region region-content">
+				<div class="container-fluid">
+					<div class="bottomSection clearfix">
+						<div id="" class="block block-views col-xs-3 col-md-3 quickApplyContainer">
+							<div class="content">
+								<div class="view view-display-id-block view-dom-id-df30aaa6313325594ef54decfbdd5ea5">
+									<div class="view-content">
+										<div id="quickApply" class="careersWrapper views-row views-row-1 views-row-odd views-row-first views-row-last">
+											<div class="quickApplyTitle">QUICK APPLY</div>
+												%%QUICK_APPLY%%
+											</div>
+										<div class="views-field applyButton">        
+                                             <h2 class="field-content block-contact-apply">  
+                                                 <a href="/careers/online-form/create_application" title="Apply Online" class="smallLinks">Apply Online</a>
+                                             </h2>  
+                                        </div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="" class="block block-views col-xs-9 col-md-9 col-lg-9">
+                                <div class="content">
+                                    <div class="view view-display-id-block view-dom-id-df30aaa6313325594ef54decfbdd5ea5">
+                                        <div class="view-content">
+                                            <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+												%%APPLICATION_LISTING%%
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
