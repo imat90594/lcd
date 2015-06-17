@@ -1,6 +1,4 @@
 <?php
-
-
 //developers helper
 require_once "Data/Debugger/debug.php";
 
