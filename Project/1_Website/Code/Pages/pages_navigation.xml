@@ -22,6 +22,43 @@
 				<link_text>HOME</link_text>
 		</page>
 		<page>
+				<page_id>about</page_id>
+				<url_name>about</url_name>
+				<link_title>about</link_title>
+				<link_text>about</link_text>
+				<page>
+					<page_id>history</page_id>
+					<url_name>history</url_name>
+					<link_title>history</link_title>
+					<link_text>history</link_text>
+				</page>
+				<page>
+					<page_id>message</page_id>
+					<url_name>message</url_name>
+					<link_title>message</link_title>
+					<link_text>message</link_text>
+				</page>
+				<page>
+					<page_id>committee</page_id>
+					<url_name>committee</url_name>
+					<link_title>committee</link_title>
+					<link_text>committee</link_text>
+				</page>
+				<page>
+					<page_id>constitution</page_id>
+					<url_name>constitution</url_name>
+					<link_title>constitution</link_title>
+					<link_text>constitution</link_text>
+				</page>
+				<page>
+					<page_id>events</page_id>
+					<url_name>events</url_name>
+					<link_title>events</link_title>
+					<link_text>events</link_text>
+				</page>
+		</page>
+		
+		<page>
 				<page_id>hotels</page_id>
 				<url_name>hotels</url_name>
 				<link_title>hotels</link_title>
