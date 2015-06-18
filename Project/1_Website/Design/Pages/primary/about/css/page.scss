@@ -1,99 +1,18 @@
 /************************************** HOMEPAGE **************************************/
 @import 'C:/WORKSPACE/lcd/Project/1_Website/Design/Main_Layout/scss/core/global';
 
-.container{
-  .firstRow{
-    .concierge{
-      padding-right:0px;
-            
-    }
-      .concierge, .featuredMember{
-        h1,h2,h3{
-          font-family:'AmplitudeExtraComp-Medium_3552';
-          color:#f3c483;
-          font-weight:lighter;
-        }
-        h1{
-          font-size:25px;
-          line-height: 25px;
-        }
-        h2{
-          font-size:35px;
-          line-height: 40px;
-        }
-        h3{
-          font-size:30px;
-          line-height: 35px;
-        }
-        .shortDesc{
-          p{
-            font-family:'century-gothic-regular';
-            color:#fff;
-            font-size:14px;
-            text-align:left;
-            line-height: 20px;
-          }
-        }
-        .carousel-fade .carousel-inner .item {
-        opacity: 0;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
-      }
-      .carousel-fade .carousel-inner .active {
-        opacity: 1;
-      }
-      .carousel-fade .carousel-inner .active.left,
-      .carousel-fade .carousel-inner .active.right {
-        left: 0;
-        opacity: 0;
-        z-index: 1;
-      }
-      .carousel-fade .carousel-inner .next.left,
-      .carousel-fade .carousel-inner .prev.right {
-        opacity: 1;
-      }
-      .carousel-fade .carousel-control {
-        z-index: 2;
-      }
-      .plugins{
-        h4{
-          font-family:'century-gothic-regular';
-          color:#fff;
-          font-size:11px;
-          text-align:left;
-          font-weight:normal;
-        }
-        h5{
-          font-family:'century-gothic-regular';
-          color:#fff;
-          font-size:10px;
-          text-align:left;
-          font-weight:normal;
-        }
-        div{
-          padding: 0;
-
-        }
-        .pTxs{
-          padding-top:5px;
-        }
-      }
-      }
-      .imgContainer, .featuredTitle{
-        padding-left:0;
-        padding-right:0;
-        .overlay{
-          bottom: 0;
-        }
-      }
-      hr{
-        color:white;
-      }
+.jumbotron{
+  height:300px;
+  margin-bottom: 0px;
+  background:{
+    size:cover;
+    repeat:no-repeat;
+    position:center bottom;
   }
 }
-.secondRow{
+
+
+.aboutContainer{
   section{
       h1{
         font-family:'AmplitudeExtraComp-Medium_3552';
@@ -103,6 +22,18 @@
         padding-left: 50px;
         margin-right: 37px;
       }
+      h2{
+        font-family:'AmplitudeExtraComp-Medium_3552';
+        color:#f4c483;
+        font-weight:lighter;
+        font-size:36px;
+      }
+      h3{
+        font-family:'AmplitudeExtraComp-Medium_3552';
+        color:#f4c483;
+        font-weight:lighter;
+        font-size:30px;
+        }
       hr{
         margin-top:14px;
         border: none;
@@ -118,11 +49,26 @@
         line-height: 20px;
         padding-left: 30px;
         padding-right: 30px;
+        a{
+          color:#f4c483;
+        }
       }
-      .slide {
+      ul{
+        li{
+          p{
+            text-align:left;
+          }
+        }
+      }
+      .slider1{
+          height:1250px;
+        }
+        .slide {
         height: 400px;
         overflow: hidden;
         position: relative;
+        margin:0 auto;
+        margin-bottom:20px;
       }
       
       .card_content {
@@ -153,132 +99,6 @@
       .slide:hover .card_content h2{
         margin-top:50px;
       }
+    
     }
   }
-  
-.bx-wrapper .bx-prev {
-  left: 0px;
-  @include sprite(41.065px,70.354px,-1.891px, -96.176px,'no-hover',$sprites);
-}
-
-.bx-wrapper .bx-next {
-  right: 0px;
-  @include sprite(41.065px,70.354px,-40.891px, -95.176px,'no-hover',$sprites);
-}
-
-.thirdRow{
-  background-color:#ffffff;
-  section{
-    padding-left:0 !important;
-    padding-right:0 !important;
-      h1{
-        font-family:'AmplitudeExtraComp-Medium_3552';
-        color:#f1bc56;
-        font-weight:lighter;
-        font-size:60px;
-      }
-      hr{
-        margin-top:14px;
-        border: none;
-        height: 5px;
-        color: #f1bc56;
-        background-color: #f1bc56;
-      }
-      .guideContainer{
-        .circularImage{
-          width: 235px;
-          height: 235px;
-          border-radius: 117.5px;
-          -webkit-border-radius: 117.5px;
-          -moz-border-radius: 117.5px;
-          background-repeat:no-repeat;
-          background-size:cover;
-          background-position:center center;
-          box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-          -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-          -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-          margin:0 auto;
-        }
-        h1{
-          font-family:'AmplitudeExtraComp-Medium_3552';
-          color:#f1bc56;
-          font-weight:lighter;
-          font-size:48px;
-        }
-        p{
-          font-family:'century-gothic-regular';
-          color:#000;
-          font-size:18px;
-          font-weight:lighter
-        }
-      }
-    }
-    .tab-content{
-      height:311px;
-      border:1px solid #f1bc56;
-    }
-}
-
-
-
-//Weather Plugin//
-/*
-  Docs at http://http://simpleweatherjs.com
-
-  Look inspired by http://www.degreees.com/
-  Used for demo purposes.
-
-  Weather icon font from http://fonts.artill.de/collection/artill-weather-icons
-
-  DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
-*/
-
-
-#weather {
-  width: 100%;
-  margin: 0px auto;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-
-#weather h2 {
-  font-family: Verdana,sans-serif !important;
-  margin: 0 0 8px;
-  color: white;
-  font-size: 10px;
-  font-weight: normal;
-  text-align: center;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-  line-height: 3;
-  margin-top: -2px;
-  text-align: left;
-}
-
-#weather ul {
-  margin: 0;
-  padding: 0;
-}
-
-#weather li {
-  background: #fff;
-  background: rgba(255,255,255,0.90);
-  padding: 20px;
-  display: inline-block;
-  border-radius: 5px;
-}
-
-#weather .currently {
-  margin: 0 20px;
-}
-
-.js-geolocation {
-  display: block;
-  margin: 15px auto;
-  width: 140px;
-  padding: 5px;
-  background: transparent;
-  color: #fff;
-  border: 0;
-  border-radius: 5px;
-}

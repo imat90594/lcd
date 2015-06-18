@@ -141,6 +141,15 @@ body{
   @include sprite(41.065px,70.354px,-40.891px, -95.176px,'no-hover',$sprites);
 }
 
+#seeMore{
+  @include sprite(110.065px,40.354px,-109.891px, -53.176px,'no-hover',$sprites); 
+}
+
+#viewEvent{
+  @include sprite(110.065px,40.354px,-109.891px, -111.176px,'no-hover',$sprites); 
+}
+
+
 // -----------------------------404------------------------
 #wrapper404{
   max-width:1200px;
