@@ -150,6 +150,10 @@ body{
   @include sprite(110.065px,40.354px,-109.891px, -111.176px,'no-hover',$sprites); 
 }
 
+#submitBtn{
+  @include sprite(110.065px,40.354px,-217.891px, -53.176px,'no-hover',$sprites); 
+}
+
 
 // -----------------------------404------------------------
 #wrapper404{

@@ -65,6 +65,13 @@
 				<link_text>Hotels</link_text>
 		</page>
 		
+		<page>
+				<page_id>contact</page_id>
+				<url_name>contact</url_name>
+				<link_title>Contact</link_title>
+				<link_text>Contact</link_text>
+		</page>
+		
 	</navigation_group>
 </pages>
 <!-- **************************************************************************************************-->
