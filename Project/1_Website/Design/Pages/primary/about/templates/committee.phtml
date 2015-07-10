@@ -10,186 +10,20 @@
 		</div>
 		<div class="pTxxl">
 				<div class="slider1">
+				
+					<?php foreach($this->members as $member):?>
 				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
+				  	<img src="<?php echo $member["image_path"]?>">
 				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
+					   <h2><?php echo $member["article_title"]?></h2>
+					   <p><?php echo $member["content"]?></p>
 					   <div class="text-center">
-					   	<a href="#" id="seeMore"></a>
+					   	<a href="/members/view/<?php echo $member["permalink"]?>" id="viewHotel"></a>
 					   </div>
 					</div>
 				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  	</div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  	</div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  	</div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  	</div>
-				  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-				  	<img src="/Project/1_Website/Design/Main_Layout/images/other/member-1.jpg">
-				  	<div class="card_content">
-					   <h2>LOREM IPSUM</h2>
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>
-						<div class="text-center">
-					   	<a href="#" id="seeMore"></a>
-					   </div>
-					</div>
-				  </div>
+				  <?php endforeach?>
+				  
 				</div>
 		</div>
 	</section>

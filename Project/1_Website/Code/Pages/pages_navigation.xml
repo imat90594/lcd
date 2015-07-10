@@ -21,6 +21,19 @@
 				<link_title>HOME</link_title>
 				<link_text>HOME</link_text>
 		</page>
+			<page>
+				<page_id>members</page_id>
+				<url_name>members</url_name>
+				<link_title>members</link_title>
+				<link_text>Members</link_text>
+				<page>
+					<page_id>membership</page_id>
+					<url_name>membership</url_name>
+					<link_title>membership</link_title>
+					<link_text>membership</link_text>
+				</page>
+		</page>
+		
 		<page>
 				<page_id>about</page_id>
 				<url_name>about</url_name>
@@ -37,12 +50,6 @@
 					<url_name>message</url_name>
 					<link_title>message</link_title>
 					<link_text>message</link_text>
-				</page>
-				<page>
-					<page_id>committee</page_id>
-					<url_name>committee</url_name>
-					<link_title>committee</link_title>
-					<link_text>committee</link_text>
 				</page>
 				<page>
 					<page_id>constitution</page_id>
@@ -63,6 +70,13 @@
 				<url_name>hotels</url_name>
 				<link_title>hotels</link_title>
 				<link_text>Hotels</link_text>
+		</page>
+		
+		<page>
+			<page_id>les_clefs_dor</page_id>
+			<url_name>les-clefs-dor</url_name>
+			<link_title>les_clefs_dor</link_title>
+			<link_text>LES CLEFS DOR</link_text>
 		</page>
 		
 		<page>

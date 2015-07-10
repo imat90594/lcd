@@ -2,19 +2,19 @@
 	<section class="container pBxl pTxxl">
 		<div class="row">
 				<hr class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hidden-sm hidden-xs">
-				<h1 class="text-center col-lg-3 col-md-3 col-sm-12 col-xs-12">HOTELS</h1>
+				<h1 class="text-center col-lg-3 col-md-3 col-sm-12 col-xs-12">MEMBERS</h1>
 				<hr class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddingLeft hidden-sm hidden-xs">
 		</div>
 		<div class=" pTxxl">
 			<div class="slider1">
-			<?php foreach($this->hotels as $hotel):?>
+			<?php foreach($this->members as $member):?>
 			  <div class="slide col-lg-3 col-md-3 col-sm-3 col-xs-12">
-			  	<img src="<?php echo $hotel["image_path"]?>">
+			  	<img src="<?php echo $member["image_path"]?>">
 			  	<div class="card_content">
-				   <h2><?php echo $hotel["article_title"]?></h2>
-				   <p><?php echo $hotel["hotel_description"]?></p>
+				   <h2><?php echo $member["article_title"]?></h2>
+				   <p><?php echo $member["content"]?></p>
 				   <div class="text-center">
-				   	<a href="/hotels/view/<?php echo $hotel["permalink"]?>" id="viewHotel"></a>
+				   	<a href="/members/view/<?php echo $member["permalink"]?>" id="viewHotel"></a>
 				   </div>
 				</div>
 			  </div>

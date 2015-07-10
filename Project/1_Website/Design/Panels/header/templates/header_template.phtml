@@ -1,3 +1,6 @@
+<?php $lcd = $this->data["lcd"];?>
+
+
 <nav class="navbar navbar-inverse navbar-static-top header blackGradient" role="navigation">
         <div class="container">
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
@@ -30,7 +33,7 @@
         <div class="100 mTs">
             <div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
             
-          
+         
                <ul class="nav navbar-nav container">
                     <li>
                         <a class="page-scroll" href="/">HOME</a>
@@ -74,13 +77,13 @@
                         <div class="dropdown-menu container mAuto" role="menu" aria-labelledby="dropdownMenu2">
 				            	<ul class="dropDownColor col-lg-4 col-md-4 col-sm-12 col-xs-12 leftContent">
 				            		<li>
-				            			<a href="#">Full Members</a>
+				            			<a href="/members">Full Members</a>
 				            		</li>
 				            		<li>
-				            			<a href="#">Adherent Members</a>
+				            			<a href="/members/adherent">Adherent Members</a>
 				            		</li>
 				            		<li>
-				            			<a href="#">Membership</a>
+				            			<a href="/members/membership">Membership</a>
 				            		</li>
 				            	</ul>
 				            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">
@@ -102,13 +105,13 @@
                         <div class="dropdown-menu container mAuto" role="menu" aria-labelledby="dropdownMenu3">
 				            	<ul class="dropDownColor col-lg-4 col-md-4 col-sm-12 col-xs-12 leftContent">
 				            		<li>
-				            			<a href="#">UICH</a>
+				            			<a href="/les-clefs-dor">UICH</a>
 				            		</li>
 				            		<li>
-				            			<a href="#">UICH Website Link</a>
+				            			<a href="<?php echo $lcd->uich_website_link;?>">UICH Website Link</a>
 				            		</li>
 				            		<li>
-				            			<a href="#">Revue</a>
+				            			<a href="<?php echo $lcd->revue_website_link;?>">Revue</a>
 				            		</li>
 				            	</ul>
 				            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">

@@ -54,6 +54,22 @@
 				</div>
 			</div>
 			
+			<div class="clearfix mVxl row image_group">
+			<div class="col-xs-2">
+			<span class="element_description">Image</span>
+			</div>
+			<div class="col-xs-10 clearfix">
+			<div class="image_holder fleft mRl">
+			<div id="image_overflow">
+			<div id="img" style="background-image:url('<?php echo $article["image_thumb"]?>')"></div>
+			</div>
+			</div>
+			<input type="hidden" name="image_id" value="<?php echo $article["image_id"];?>" />
+			<span class="show_photo_chooser pointer fleft posAbs btn">Change Image</span>
+			<span class="remove_photo pointer fleft posAbs btn">Remove Image</span>
+			</div>
+			</div>
+			
 		<?php if($app != "hotels"):?>
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
@@ -64,22 +80,6 @@
 				</div>
 			</div>
 
-			<div class="clearfix mVxl row image_group">
-				<div class="col-xs-2">
-					<span class="element_description">Image</span>
-				</div>
-				<div class="col-xs-10 clearfix">
-					<div class="image_holder fleft mRl">
-						<div id="image_overflow">
-							<div id="img" style="background-image:url('<?php echo $article["image_thumb"]?>')"></div>
-						</div>
-					</div>
-					<input type="hidden" name="image_id" value="<?php echo $article["image_id"];?>" /> 
-					<span class="show_photo_chooser pointer fleft posAbs btn">Change Image</span>
-					<span class="remove_photo pointer fleft posAbs btn">Remove Image</span>
-				</div>
-			</div>
-		
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
 					<span class="element_description">Content</span>
@@ -98,7 +98,7 @@
 					<input type="text" name="hotel_name" class="longInput" value="<?php echo $article["hotel_name"];?>" />
 				</div>
 			</div>
-		<?php endif?>	
+	
 			
 			
 			<div class="clearfix mVxl row image_group">
@@ -116,6 +116,8 @@
 					<span class="remove_photo pointer fleft posAbs btn">Remove Image</span>
 				</div>
 			</div>
+			
+				<?php endif?>	
 			
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
