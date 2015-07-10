@@ -16,6 +16,10 @@ class article
     public $downloadables_path;
     public $image_id;
     public $article_type;
+    public $hotel_image_id;
+    public $hotel_description;
+    public $hotel_name;
+    public $position;
 
 //================================================================================================//
 
@@ -192,7 +196,11 @@ class article
                         date_modified 		= :date_modified,
                         metadata 			= :metadata,
                         downloadables_path  = :downloadables_path,
-                        image_id 			= :image_id 
+                        image_id 			= :image_id,
+                        hotel_image_id 			= :hotel_image_id,
+                        hotel_name 			= :hotel_name,
+                        hotel_description 			= :hotel_description,
+                        position = :position
                     WHERE
                         article_id = :article_id";
 
@@ -211,6 +219,10 @@ class article
             $pdo_statement->bindParam(":metadata", 			  $this->metadata, 			  PDO::PARAM_STR);
             $pdo_statement->bindParam(":downloadables_path",  $this->downloadables_path,  PDO::PARAM_STR);
             $pdo_statement->bindParam(":image_id", 			  $this->image_id, 			  PDO::PARAM_INT);
+            $pdo_statement->bindParam(":hotel_image_id", 			  $this->hotel_image_id, 			  PDO::PARAM_INT);
+            $pdo_statement->bindParam(":hotel_name", 			  $this->hotel_name, 			  PDO::PARAM_INT);
+            $pdo_statement->bindParam(":hotel_description", 			  $this->hotel_description, 			  PDO::PARAM_INT);
+            $pdo_statement->bindParam(":position", 			  $this->position, 			  PDO::PARAM_INT);
             $pdo_statement->execute();
 
         }

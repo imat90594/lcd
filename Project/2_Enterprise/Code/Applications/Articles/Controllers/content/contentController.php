@@ -92,17 +92,21 @@ class contentController extends applicationsSuperController
 			$article = new article();
 			$article->article_id = $_POST["article_id"];
 			$article->select();
-				
+
 			//udpate article
 			$article->article_category_id = isset($_POST["article_category_id"]) ? $_POST["article_category_id"] : "";
 			$article->author 			  = isset($_POST["author"]) ? $_POST["author"] : "";
-			$article->article_title 	  = $_POST["article_title"];
+			$article->article_title 	  = isset($_POST["article_title"]) ? $_POST["article_title"] : "";
 			$article->article_type 	  	  = routes::getInstance()->getCurrentTopLevelURLName();
 			$article->date_created  	  = strtotime($_POST["date_created"]);
 			$article->is_publish    	  = $_POST["is_publish"];
-			$article->image_id			  = $_POST["image_id"];
-			$article->content			  = $_POST["content"];
+			$article->image_id			  = isset($_POST["image_id"]) ? $_POST["image_id"] : "";
+			$article->content			  = isset($_POST["content"]) ? $_POST["content"] : "";
 			$article->metadata			  = isset($_POST["metadata"]) ? $_POST["metadata"] : "";
+			$article->position			  = isset($_POST["position"]) ? $_POST["position"] : "";
+			$article->hotel_image_id	  = isset($_POST["hotel_image_id"]) ? $_POST["hotel_image_id"] : "";
+			$article->hotel_name	  	  = isset($_POST["hotel_name"]) ? $_POST["hotel_name"] : "";
+			$article->hotel_description	  = isset($_POST["hotel_description"]) ? $_POST["hotel_description"] : "";
 			$article->update();
 				
 			//update permalink
@@ -119,7 +123,6 @@ class contentController extends applicationsSuperController
 					$route->update();
 				}
 			}
-				
 			$url = routes::getInstance()->getCurrentTopLevelURLName()."/content/view/".$article->article_id;
 			header("Location: /$url");
 		}

@@ -1,5 +1,6 @@
 <?php $article = $this->article;?>
 <div id="">
+	<?php $app = routes::getInstance()->getCurrentTopLevelURLName()?>
 	<form method="POST" action="/<?php echo routes::getInstance()->getCurrentTopLevelURLName();?>/content/update">
 		<input type="hidden" name="article_id" value="<?php echo $article["article_id"];?>" />
 		<div id="editorContainer">
@@ -12,7 +13,27 @@
 				</div>
 			</div>
 			
+		<?php if($app != "hotels"):?>
 			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Category</span>
+				</div>
+				<div class="col-xs-10">
+					<select style="border:1px solid black;" name="article_category_id">
+						<?php if($this->article_categories):?>
+						<option value="0">No Category</option>
+						<?php foreach($this->article_categories as $category):?>
+							<option <?php echo ($article["article_category_id"] == $category->article_category_id) ? "selected" : ""?> value="<?php echo $category->article_category_id?>">
+								<?php echo $category->category_name?>
+							</option>
+						<?php endforeach?>
+						<?php endif?>
+					</select>
+				</div>
+			</div>
+			<?php endif?>
+			
+			<div class="clearfix mVxl row hide">
 				<div class="col-xs-2">
 					<span class="element_description">Date Posted</span> 
 				</div>
@@ -32,7 +53,17 @@
 					</select>
 				</div>
 			</div>
-		
+			
+		<?php if($app != "hotels"):?>
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Position</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<input type="text" name="position" class="longInput" value="<?php echo $article["position"];?>" />
+				</div>
+			</div>
+
 			<div class="clearfix mVxl row image_group">
 				<div class="col-xs-2">
 					<span class="element_description">Image</span>
@@ -56,6 +87,43 @@
 				<div class="element_content col-xs-10">
 					<textarea class="editor" name="content">
 						<?php echo $article["content"]; ?>
+					</textarea>
+				</div>
+			</div>
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Hotel Name</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<input type="text" name="hotel_name" class="longInput" value="<?php echo $article["hotel_name"];?>" />
+				</div>
+			</div>
+		<?php endif?>	
+			
+			
+			<div class="clearfix mVxl row image_group">
+				<div class="col-xs-2">
+					<span class="element_description">Hotel Image</span>
+				</div>
+				<div class="col-xs-10 clearfix">
+					<div class="image_holder fleft mRl">
+						<div id="image_overflow">
+							<div id="img" style="background-image:url('<?php echo $article["hotel_thumb"]?>')"></div>
+						</div>
+					</div>
+					<input type="hidden" name="hotel_image_id" value="<?php echo $article["hotel_image_id"];?>" /> 
+					<span class="show_photo_chooser pointer fleft posAbs btn">Change Image</span>
+					<span class="remove_photo pointer fleft posAbs btn">Remove Image</span>
+				</div>
+			</div>
+			
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Hotel Description</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<textarea class="editor" name="hotel_description">
+						<?php echo $article["hotel_description"]; ?>
 					</textarea>
 				</div>
 			</div>

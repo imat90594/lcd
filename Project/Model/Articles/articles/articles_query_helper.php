@@ -137,7 +137,9 @@ class articles_query_helper
 						i.image_title,
 						i.image_caption,
 						CONCAT('/Data/Images/', ab.album_folder, '/', ais.dimensions, '/', i.path) as image_path,
-						CONCAT('/Data/Images/', ab.album_folder, '/', ais.dimensions, '_thumb/', i.path) as image_thumb
+						CONCAT('/Data/Images/', ab.album_folder, '/', ais.dimensions, '_thumb/', i.path) as image_thumb,
+						CONCAT('/Data/Images/Hotels_album/1000x1000/', (SELECT path FROM images where image_id = a.hotel_image_id)) as hotel_image,
+						CONCAT('/Data/Images/Hotels_album/1000x1000_thumb/', (SELECT path FROM images where image_id = a.hotel_image_id)) as hotel_thumb
 					FROM
 						articles a
 					INNER JOIN

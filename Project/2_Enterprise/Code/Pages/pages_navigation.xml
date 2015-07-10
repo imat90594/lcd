@@ -17,42 +17,18 @@
 				<link_title>Edit the content of your static pages</link_title>
 				<link_text>Content Manager</link_text>
 		</page>
-		<!-- ***************************************************************************************** -->
 		<page>
-			<page_id>job_manager</page_id>
-			<url_name>job_manager</url_name>
-			<link_title>Job Manager</link_title>
-			<link_text>Job Manager</link_text>
-		</page>
-		<!-- ***************************************************************************************** -->
-		<page>
-				<page_id>news</page_id>
-				<url_name>news</url_name>
-				<link_title>Manage and organize your articles</link_title>
-				<link_text>News</link_text>
+				<page_id>members</page_id>
+				<url_name>members</url_name>
+				<link_title>Members</link_title>
+				<link_text>Members</link_text>
 		</page>
 		<page>
-				<page_id>csr</page_id>
-				<url_name>csr</url_name>
-				<link_title>Manage and organize your articles</link_title>
-				<link_text>CSR</link_text>
+				<page_id>hotels</page_id>
+				<url_name>hotels</url_name>
+				<link_title>hotels</link_title>
+				<link_text>Hotels</link_text>
 		</page>
-		<page>
-				<page_id>seafarers</page_id>
-				<url_name>seafarers</url_name>
-				<link_title>Manage and organize your articles</link_title>
-				<link_text>Seafarers</link_text>
-		</page>
-		<!-- ***************************************************************************************** -->
-		<page>
-			<page_id>cv_manager</page_id>
-			<url_name>cv-manager</url_name>
-			<link_title>CV Manager</link_title>
-			<link_text>CV Manager</link_text>
-		</page>
-		
-		<!-- ***************************************************************************************** -->
-		
 		<page>
                 <page_id>settings</page_id>
                 <url_name>settings</url_name>
