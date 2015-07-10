@@ -30,6 +30,7 @@
 }
 
 
+
 html,*{
   @extend %boxsizing;
   @extend %CSS3-pie; //http://css3pie.com/documentation/supported-css3-features/ for detailed implementation
@@ -140,6 +141,19 @@ body{
 #bx-next{
   @include sprite(41.065px,70.354px,-40.891px, -95.176px,'no-hover',$sprites);
 }
+
+#seeMore{
+  @include sprite(110.065px,40.354px,-109.891px, -53.176px,'no-hover',$sprites); 
+}
+
+#viewEvent{
+  @include sprite(110.065px,40.354px,-109.891px, -111.176px,'no-hover',$sprites); 
+}
+
+#submitBtn{
+  @include sprite(110.065px,40.354px,-217.891px, -53.176px,'no-hover',$sprites); 
+}
+
 
 // -----------------------------404------------------------
 #wrapper404{
