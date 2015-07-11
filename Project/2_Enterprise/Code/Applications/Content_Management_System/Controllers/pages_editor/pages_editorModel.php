@@ -212,7 +212,7 @@ class pages_editorModel extends modelSuperClass_Core
 						}
 	
 						$string = stripslashes($string);
-						$string = strip_tags($string,'<strong><em><b><i><u><hr><a><sub><sup><blockquote><br><ul><ol><li><img><p><table><tbody><tr><td><h1><h2><h3><h4><h5><h6>');
+						$string = strip_tags($string,'<strong><iframe><em><b><i><u><hr><a><sub><sup><blockquote><br><ul><ol><li><img><p><table><tbody><tr><td><h1><h2><h3><h4><h5><h6>');
 						//$string = str_replace ( '&#039;', '\'', $string );
 						$string = str_replace ( '&quot;', '\"', $string );
 						$string = str_replace ( '&lt;', '<', $string );

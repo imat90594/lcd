@@ -1,5 +1,7 @@
 <?php $lcd = $this->data["lcd"];?>
-
+<?php $about = $this->data["about"];?>
+<?php $members = $this->data["members"];?>
+<?php $press = $this->data["press"];?>
 
 <nav class="navbar navbar-inverse navbar-static-top header blackGradient" role="navigation">
         <div class="container">
@@ -60,14 +62,10 @@
 			            	</ul>
 			            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">
 			            	<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
-			            		<img class="img-responsive" src="/Project/1_Website/Design/Main_Layout/images/other/sample-hotel.jpg">
+			            		<img class="img-responsive" src="/Data/Images/<?php echo $about->preview->image->path?>">
 			            	</div>
 			            	<div class="descContainer col-lg-7 col-md-7 col-sm-7 col-xs-7">
-			            		<h1><a href="#">Peninsula</a></h1>
-			            		<hr>
-			            		<div class="ellipsis">
-			            			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			            		</div>
+			            		<?php echo $about->preview->page_content_editor?>
 			            	</div>
 			            </div>
 			          </div>
@@ -87,15 +85,11 @@
 				            		</li>
 				            	</ul>
 				            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">
-				            	<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
-				            		<img class="img-responsive" src="/Project/1_Website/Design/Main_Layout/images/other/sample-hotel.jpg">
+								<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				            		<img class="img-responsive" src="/Data/Images/<?php echo $members->preview->image->path?>">
 				            	</div>
 				            	<div class="descContainer col-lg-7 col-md-7 col-sm-7 col-xs-7">
-				            		<h1><a href="#">Peninsula</a></h1>
-				            		<hr>
-				            		<div class="ellipsis">
-				            			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				            		</div>
+				            		<?php echo $members->preview->page_content_editor?>
 				            	</div>
 				            </div>
 			          </div>
@@ -115,15 +109,11 @@
 				            		</li>
 				            	</ul>
 				            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">
-				            	<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
-				            		<img class="img-responsive" src="/Project/1_Website/Design/Main_Layout/images/other/sample-hotel.jpg">
+			            		<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				            		<img class="img-responsive" src="/Data/Images/<?php echo $lcd->preview->image->path?>">
 				            	</div>
 				            	<div class="descContainer col-lg-7 col-md-7 col-sm-7 col-xs-7">
-				            		<h1><a href="#">Peninsula</a></h1>
-				            		<hr>
-				            		<div class="ellipsis">
-				            			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				            		</div>
+				            		<?php echo $lcd->preview->page_content_editor?>
 				            	</div>
 				            </div>
 			          </div>
@@ -132,54 +122,25 @@
                         <a class="page-scroll" href="/hotels">HOTELS</a>
                     </li>
                     <li class="dropdown guide">
-                        <a href="#" class="dropdown-toggle page-scroll" data-toggle="dropdown" id="dropdownMenu4" aria-expanded="true">CITY GUIDE</a>
-                        <div class="dropdown-menu container mAuto" role="menu" aria-labelledby="dropdownMenu4">
-				            	<ul class="dropDownColor col-lg-4 col-md-4 col-sm-12 col-xs-12 leftContent">
-				            		<li>
-				            			<a href="#">Eat</a>
-				            		</li>
-				            		<li>
-				            			<a href="#">Play</a>
-				            		</li>
-				            		<li>
-				            			<a href="#">Stay</a>
-				            		</li>
-				            	</ul>
-				            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">
-				            	<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
-				            		<img class="img-responsive" src="/Project/1_Website/Design/Main_Layout/images/other/sample-hotel.jpg">
-				            	</div>
-				            	<div class="descContainer col-lg-7 col-md-7 col-sm-7 col-xs-7">
-				            		<h1><a href="#">Peninsula</a></h1>
-				            		<hr>
-				            		<div class="ellipsis">
-				            			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				            		</div>
-				            	</div>
-				            </div>
-			          </div>
+                        <a href="/city-guide" id="dropdownMenu4" aria-expanded="true">CITY GUIDE</a>
                     </li>
                     <li class="dropdown press">
                         <a href="#" class="dropdown-toggle page-scroll" data-toggle="dropdown" id="dropdownMenu5" aria-expanded="true">PRESS ROOM</a>
                         <div class="dropdown-menu container mAuto" role="menu" aria-labelledby="dropdownMenu5">
 				            	<ul class="dropDownColor col-lg-4 col-md-4 col-sm-12 col-xs-12 leftContent">
 				            		<li>
-				            			<a href="#">Features</a>
+				            			<a href="/press-room/features">Features</a>
 				            		</li>
 				            		<li>
-				            			<a href="#">Press Releases</a>
+				            			<a href="/press-room">Press Releases</a>
 				            		</li>
 				            	</ul>
 				            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 rightContent">
-				            	<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
-				            		<img class="img-responsive" src="/Project/1_Website/Design/Main_Layout/images/other/sample-hotel.jpg">
+			            		<div class="imgContainer col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				            		<img class="img-responsive" src="/Data/Images/<?php echo $press->preview->image->path?>">
 				            	</div>
 				            	<div class="descContainer col-lg-7 col-md-7 col-sm-7 col-xs-7">
-				            		<h1><a href="#">Peninsula</a></h1>
-				            		<hr>
-				            		<div class="ellipsis">
-				            			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				            		</div>
+				            		<?php echo $press->preview->page_content_editor?>
 				            	</div>
 				            </div>
 			          </div>

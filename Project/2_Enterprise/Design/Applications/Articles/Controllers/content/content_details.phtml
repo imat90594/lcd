@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			
-		<?php if($app != "hotels"):?>
+		<?php if($app == "members"):?>
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
 					<span class="element_description">Category</span>
@@ -31,16 +31,20 @@
 					</select>
 				</div>
 			</div>
-			<?php endif?>
+		<?php endif?>
 			
-			<div class="clearfix mVxl row hide">
-				<div class="col-xs-2">
-					<span class="element_description">Date Posted</span> 
-				</div>
-				<div class="col-xs-10">
-					<input type="text" class="datepicker" data-date-format="yyyy/mm/dd" name="date_created" value="<?php echo date("Y/m/d", $article["date_created"]);?>" />
-				</div>
+		<?php if($app == "press-room"):?>
+		<div class="clearfix mVxl row">
+			<div class="col-xs-2">
+				<span class="element_description">Date Posted</span> 
 			</div>
+			<div class="col-xs-10">
+				<input type="text" class="datepicker" data-date-format="yyyy/mm/dd" name="date_created" value="<?php echo date("Y/m/d", $article["date_created"]);?>" />
+			</div>
+		</div>
+		<?php endif?>
+	
+		
 			
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
@@ -73,15 +77,6 @@
 		<?php if($app != "hotels"):?>
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
-					<span class="element_description">Position</span>
-				</div>
-				<div class="element_content col-xs-10">
-					<input type="text" name="position" class="longInput" value="<?php echo $article["position"];?>" />
-				</div>
-			</div>
-
-			<div class="clearfix mVxl row">
-				<div class="col-xs-2">
 					<span class="element_description">Content</span>
 				</div>
 				<div class="element_content col-xs-10">
@@ -90,6 +85,18 @@
 					</textarea>
 				</div>
 			</div>
+		<?php endif?>
+			
+		<?php if($app == "members"):?>
+			<div class="clearfix mVxl row">
+				<div class="col-xs-2">
+					<span class="element_description">Position</span>
+				</div>
+				<div class="element_content col-xs-10">
+					<input type="text" name="position" class="longInput" value="<?php echo $article["position"];?>" />
+				</div>
+			</div>
+
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
 					<span class="element_description">Hotel Name</span>
@@ -117,8 +124,9 @@
 				</div>
 			</div>
 			
-				<?php endif?>	
+		<?php endif?>	
 			
+		<?php if($app == "hotels"):?>
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">
 					<span class="element_description">Hotel Description</span>
@@ -129,6 +137,7 @@
 					</textarea>
 				</div>
 			</div>
+		<?php endif?>	
 			
 			<div class="clearfix mVxl row">
 				<div class="col-xs-2">

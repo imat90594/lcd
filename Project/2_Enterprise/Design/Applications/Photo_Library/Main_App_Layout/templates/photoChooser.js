@@ -3,9 +3,8 @@ $(document).ready(function(){
 	texteditor = false;
 	divImageObject = "";
 	
-	
 	//show photo chooser
-	$('span.show_photo_chooser,img.show_photo_chooser, .cke_button__image').on('click',function(){
+	$('span.show_photo_chooser,img.show_photo_chooser, .cke_button__image').live('click',function(){
 		
 		$("html, body").animate({ scrollTop: 0 }, "fast");
 		

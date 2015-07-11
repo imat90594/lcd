@@ -80,6 +80,20 @@
 		</page>
 		
 		<page>
+				<page_id>city_guide</page_id>
+				<url_name>city-guide</url_name>
+				<link_title>city_guide</link_title>
+				<link_text>City Guide</link_text>
+		</page>
+		
+		<page>
+				<page_id>press_room</page_id>
+				<url_name>press-room</url_name>
+				<link_title>press_room</link_title>
+				<link_text>Press Room</link_text>
+		</page>
+		
+		<page>
 				<page_id>contact</page_id>
 				<url_name>contact</url_name>
 				<link_title>Contact</link_title>

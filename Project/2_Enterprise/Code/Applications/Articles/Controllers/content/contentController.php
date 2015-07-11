@@ -98,7 +98,7 @@ class contentController extends applicationsSuperController
 			$article->author 			  = isset($_POST["author"]) ? $_POST["author"] : "";
 			$article->article_title 	  = isset($_POST["article_title"]) ? $_POST["article_title"] : "";
 			$article->article_type 	  	  = routes::getInstance()->getCurrentTopLevelURLName();
-			$article->date_created  	  = strtotime($_POST["date_created"]);
+			$article->date_created  	  = isset($_POST["date_created"]) ? strtotime($_POST["date_created"]) : "";
 			$article->is_publish    	  = $_POST["is_publish"];
 			$article->image_id			  = isset($_POST["image_id"]) ? $_POST["image_id"] : "";
 			$article->content			  = isset($_POST["content"]) ? $_POST["content"] : "";

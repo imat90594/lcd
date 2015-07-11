@@ -19,10 +19,15 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'styles' }
 		];
 		
+		config.extraPlugins = 'dragresize';
+		
 		// Remove some buttons, provided by the standard plugins, which we don't
 		// need to have in the Standard(s) toolbar.
 		config.removeButtons = 'Document,DocTools,Save,NewPage,Flash,Smiley,Iframe,PageBreak,Preview,Print,CreateDiv,FontSize,Font,Copy,Cut,Undo,Redo';
 };
+
+
+
 
 
 CKEDITOR.on( 'dialogDefinition', function( ev )

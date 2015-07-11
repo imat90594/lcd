@@ -30,6 +30,12 @@
 				<link_text>Hotels</link_text>
 		</page>
 		<page>
+				<page_id>press_room</page_id>
+				<url_name>press-room</url_name>
+				<link_title>press_room</link_title>
+				<link_text>Press Room</link_text>
+		</page>
+		<page>
                 <page_id>settings</page_id>
                 <url_name>settings</url_name>
                 <link_title>Edit settings</link_title>
