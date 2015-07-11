@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2015 at 09:08 AM
+-- Generation Time: Jul 11, 2015 at 01:19 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `hotel_name` varchar(100) DEFAULT NULL,
   `hotel_description` text,
   PRIMARY KEY (`article_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
 
 --
 -- Dumping data for table `articles`
@@ -161,10 +161,11 @@ INSERT INTO `articles` (`article_id`, `route_id`, `article_category_id`, `articl
 (45, 46, 0, 'seafarers', 'Test News 2', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>', 'Kevin Baisas', '1', 1415660400, 0, '', '', 26, '', NULL, NULL, NULL),
 (46, 47, 0, 'csr', 'Test Recipe 1', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\r\n\r\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '', '1', 1415660400, 0, '', '', 26, '', NULL, NULL, NULL),
 (47, 48, 0, 'csr', 'Test Article Last', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', '', '1', 1415746800, 0, '.', '', 26, '', NULL, NULL, NULL),
-(48, 49, 16, 'members', 'Mayumi Hayakawa-Marcelo', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n', '', '1', 1434492000, 0, '', '', 27, 'position', 30, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
+(48, 49, 16, 'members', 'Mayumi Hayakawa-Marcelo', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n', '', '1', 0, 0, '', '', 27, 'position', 30, '', ''),
 (49, 50, 17, 'members', 'Noey Villasabas', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n', '', '1', 1434492000, 0, '', '', 29, 'Position', 30, 'test', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
-(50, 51, 0, 'hotels', 'Peninsula', '', '', '1', 1436479200, 0, '', '', 30, '', 0, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
-(51, 52, 0, 'hotels', 'Fairmont', '', '', '1', 1436479200, 0, '', '', 30, '', 0, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n');
+(50, 51, 0, 'hotels', 'Peninsula', '', '', '1', 0, 0, '', '', 30, '', 0, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
+(51, 52, 0, 'hotels', 'Fairmont', '', '', '1', 1436479200, 0, '', '', 30, '', 0, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
+(52, 53, 0, 'press-room', 'Press Room 1', '<p>On the first day of a seminar in Singapore, Manny Suarez and Claire Cuadrado were introduced as delegates from the Philippines &ndash; and they didn&rsquo;t even know each other!&nbsp;<br />\r\n<br />\r\nThat is how Les Clefs d&#39;Or Philippines started. The seminar was entitled, \\&quot;A Seminar on the World&#39;s Least Known Profession.\\&quot; Held through the auspices of Les Clefs d&#39;Or Singapore, the seminar opened their eyes to the world of conciergerie. On their first day back at work in Manila, they started to compare notes and focused on how to form a local association of concierges.&nbsp;<br />\r\n<br />\r\nExcept for the 5 star hotels in Manila, no one knew what Concierge is all about. Meetings after meetings, members started to join Manny and Claire. Amongst the first to come in were; Jobel Ramos of the Hotel Nikko Manila Garden, Robbie Gonzales of The Manila Peninsula, Marc Bernie Corpus of The Mandarin Oriental, Marie Zulueta of Hotel Inter-Continental Manila, Rorie Ylagan of then The Westin Philippine Plaza, Vic Cruz, Roland Diokno, Gina Rivera and Gana of The Manila Hotel and Andy Pongco of then Manila Midtown Ramada Hotel. Thus saw the birth of the \\&quot;Concierge and Guest Services Association of the Philippines\\&quot;, with the logo resembling very much that of a Swiss bank.</p>\r\n', '', '1', 1436997600, 0, '', '', 30, '', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -247,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `enterprise_settings` (
 --
 
 INSERT INTO `enterprise_settings` (`settings_id`, `username`, `password`, `use_smtp`, `smtp_host`, `smtp_username`, `smtp_pass`, `smtp_auth`, `smtp_port`, `from_email`, `from_name`, `to_email`, `to_name`, `google_analytics`, `google_verification`) VALUES
-(1, 'admin', 'fe703d258c7ef5f50b71e06565a65aa07194907f', 1, 'mail.s177138.gridserver.com', 'mailer@starfi.sh', '123Mana!', 1, '25', '', '', 'raymart.marasigan@gmail.com', 'Raymart Marasigan', '', '');
+(1, 'admin', 'fe703d258c7ef5f50b71e06565a65aa07194907f', 1, 'mail.s177138.gridserver.com', 'mailer@starfi.sh', '123Mana!', 1, '25', '', '', 'ashley.nohay@starfi.sh', 'Ashley Nohay', '', '');
 
 -- --------------------------------------------------------
 
@@ -269,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   PRIMARY KEY (`image_id`),
   KEY `fk_images_album_id` (`album_id`),
   KEY `fk_images_size_id` (`size_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `images`
@@ -279,7 +280,8 @@ INSERT INTO `images` (`image_id`, `album_id`, `size_id`, `image_title`, `image_c
 (27, 6, 9, 'Default Title.', 'Default image caption.', 'download.jpg', 'jpg', '55814893ab81a697.jpg', '2015-06-17 10:14:43', 0),
 (29, 6, 9, 'Default Title.', 'Default image caption.', '11003_1632137560354581_2696532758174898502_n.jpg', 'jpg', '5581512a0300d92.jpg', '2015-06-17 10:51:23', 0),
 (30, 7, 10, 'Default Title.', 'Default image caption.', 'Night-skyscrapers.jpg', 'jpg', '558151f32d457652.jpg', '2015-06-17 10:54:46', 0),
-(31, 8, 11, 'Default Title.', 'Default image caption.', 'about-us-banner.jpg', 'jpg', '559f6716e10e1114.jpg', '2015-07-10 06:32:55', 0);
+(31, 8, 11, 'Default Title.', 'Default image caption.', 'about-us-banner.jpg', 'jpg', '559f6716e10e1114.jpg', '2015-07-10 06:32:55', 0),
+(32, 8, 11, 'Default Title.', 'Default image caption.', 'sample-hotel.jpg', 'jpg', '55a0eabd6da54558.jpg', '2015-07-11 10:06:53', 0);
 
 -- --------------------------------------------------------
 
@@ -364,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `route` (
   `page_id` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`route_id`),
   UNIQUE KEY `permalink_UNIQUE` (`permalink`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
 
 --
 -- Dumping data for table `route`
@@ -417,7 +419,8 @@ INSERT INTO `route` (`route_id`, `permalink`, `page_id`) VALUES
 (49, 'mayumi-hayakawa-marcelo', 'members'),
 (50, 'noey-villasabas', 'members'),
 (51, 'peninsula', 'hotels'),
-(52, 'fairmont', 'hotels');
+(52, 'fairmont', 'hotels'),
+(53, 'press-room-1', 'press-room');
 
 --
 -- Constraints for dumped tables
