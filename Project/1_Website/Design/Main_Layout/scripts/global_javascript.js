@@ -8,6 +8,7 @@ $(document).ready(function(){
 			    $(this).removeClass("open");
 			  }
 			);
+	$(".descContainer p").addClass("ellipsis");
 	
 	$(".ellipsis").dotdotdot();
 	
