@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2015 at 01:19 PM
+-- Generation Time: Jul 12, 2015 at 05:52 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `album_image_sizes` (
   `album_id` int(11) NOT NULL,
   PRIMARY KEY (`size_id`),
   KEY `fk_size_album_id` (`album_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `album_image_sizes`
@@ -65,7 +65,8 @@ CREATE TABLE IF NOT EXISTS `album_image_sizes` (
 INSERT INTO `album_image_sizes` (`size_id`, `dimensions`, `album_id`) VALUES
 (9, '500x500', 6),
 (10, '1000x1000', 7),
-(11, '2000x2000', 8);
+(11, '2000x2000', 8),
+(12, '285x400', 6);
 
 -- --------------------------------------------------------
 
@@ -161,7 +162,7 @@ INSERT INTO `articles` (`article_id`, `route_id`, `article_category_id`, `articl
 (45, 46, 0, 'seafarers', 'Test News 2', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>', 'Kevin Baisas', '1', 1415660400, 0, '', '', 26, '', NULL, NULL, NULL),
 (46, 47, 0, 'csr', 'Test Recipe 1', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\r\n\r\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\r\n', '', '1', 1415660400, 0, '', '', 26, '', NULL, NULL, NULL),
 (47, 48, 0, 'csr', 'Test Article Last', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', '', '1', 1415746800, 0, '.', '', 26, '', NULL, NULL, NULL),
-(48, 49, 16, 'members', 'Mayumi Hayakawa-Marcelo', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n', '', '1', 0, 0, '', '', 27, 'position', 30, '', ''),
+(48, 49, 16, 'members', 'Mayumi Hayakawa-Marcelo', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n', '', '1', 0, 0, '', '', 33, 'position', 30, '', ''),
 (49, 50, 17, 'members', 'Noey Villasabas', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n', '', '1', 1434492000, 0, '', '', 29, 'Position', 30, 'test', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
 (50, 51, 0, 'hotels', 'Peninsula', '', '', '1', 0, 0, '', '', 30, '', 0, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
 (51, 52, 0, 'hotels', 'Fairmont', '', '', '1', 1436479200, 0, '', '', 30, '', 0, '', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus itaque ex laborum praesentium soluta velit repudiandae deserunt magni ut dolorem obcaecati labore voluptatem reiciendis placeat tempora nisi ab laboriosam.</p>\r\n'),
@@ -270,7 +271,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   PRIMARY KEY (`image_id`),
   KEY `fk_images_album_id` (`album_id`),
   KEY `fk_images_size_id` (`size_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `images`
@@ -281,7 +282,8 @@ INSERT INTO `images` (`image_id`, `album_id`, `size_id`, `image_title`, `image_c
 (29, 6, 9, 'Default Title.', 'Default image caption.', '11003_1632137560354581_2696532758174898502_n.jpg', 'jpg', '5581512a0300d92.jpg', '2015-06-17 10:51:23', 0),
 (30, 7, 10, 'Default Title.', 'Default image caption.', 'Night-skyscrapers.jpg', 'jpg', '558151f32d457652.jpg', '2015-06-17 10:54:46', 0),
 (31, 8, 11, 'Default Title.', 'Default image caption.', 'about-us-banner.jpg', 'jpg', '559f6716e10e1114.jpg', '2015-07-10 06:32:55', 0),
-(32, 8, 11, 'Default Title.', 'Default image caption.', 'sample-hotel.jpg', 'jpg', '55a0eabd6da54558.jpg', '2015-07-11 10:06:53', 0);
+(32, 8, 11, 'Default Title.', 'Default image caption.', 'sample-hotel.jpg', 'jpg', '55a0eabd6da54558.jpg', '2015-07-11 10:06:53', 0),
+(33, 6, 12, 'Default Title.', 'Default image caption.', '55814893ab81a697.jpg', 'jpg', '55a28941076f3775.jpg', '2015-07-12 15:35:29', 0);
 
 -- --------------------------------------------------------
 
