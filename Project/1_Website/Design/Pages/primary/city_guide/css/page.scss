@@ -1,71 +1,87 @@
 /************************************** HOMEPAGE **************************************/
-@import 'C:/WORKSPACE/clefsdor/Project/1_Website/Design/Main_Layout/scss/core/global';
+@import 'C:/WORKSPACE/lcd/Project/1_Website/Design/Main_Layout/scss/core/global';
 
-.hotelsContainer{
+h1,h2,h3{
+          font-family:'texgyreadventor-bold';
+          color:#f3c483;
+          font-weight:lighter;
+        }
+        h1{
+          font-size:13px;
+          line-height: 25px;
+        }
+        h2{
+          font-size:15px;
+          line-height: 25px;
+        }
+        h3{
+          font-size:17px;
+          line-height: 30px;
+        }
+
+.cityGuideContainer{
+  background-color:#ffffff;
   section{
-    .slider1{
-      height:1250px;
-    }
-    
+    padding-left:0 !important;
+    padding-right:0 !important;
       h1{
-        font-family:'AmplitudeExtraComp-Medium_3552';
-        color:#f1bc56;
+        font-family:'texgyreadventor-bold';
+        color:$clefsdorBlue;
         font-weight:lighter;
-        font-size:60px;
-        padding-left: 50px;
-        margin-right: 37px;
+        
+      }
+      .cityGuide{
+        font-size:35px !important;
       }
       hr{
         margin-top:14px;
         border: none;
         height: 5px;
         color: #f1bc56;
-        background-color: #f1bc56;
       }
-      p{
-        font-family:'century-gothic-regular';
-        color:#fff;
-        font-size:14px;
-        text-align:center;
-        line-height: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
+      .guideContainer{
+        .circularImage{
+          width: 235px;
+          height: 235px;
+          border-radius: 117.5px;
+          -webkit-border-radius: 117.5px;
+          -moz-border-radius: 117.5px;
+          background-repeat:no-repeat;
+          background-size:cover;
+          background-position:center center;
+          box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+          -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+          -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+          margin:0 auto;
+        }
+        h1{
+          font-family:'texgyreadventor-bold';
+          color:$clefsdorBlue;
+          font-weight:lighter;
+          font-size:48px;
+        }
+        p{
+          font-family:'texgyreadventor-regular';
+          color:#000;
+          font-size:18px;
+          font-weight:lighter;
+          text-align:center;
+        }
       }
-      .slide {
-        height: 400px;
-        overflow: hidden;
-        position: relative;
-        margin:0 auto;
-        margin-bottom:20px;
-      }
-      
-      .card_content {
-        background-color: rgba(173,132,68,0.7);
-        padding: 10px;
-        position: absolute;
-        bottom: -325px;
-        height:100%;
-        
-        transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;;
-      }
-      
-      .card_content h2 {
-        font-family:'AmplitudeExtraComp-Medium_3552';
-        color:000;
-        font-weight:lighter;
-        font-size:35px;
-        text-align:center;
-        margin-bottom: 0.5em;
-        margin-top:15px;
-      }
-      
-      .slide:hover .card_content {
-        background-color: rgba(241,188,86,0.7);
-        bottom: 0;
-      }
-      .slide:hover .card_content h2{
-        margin-top:50px;
+      .concierge{
+        h1{
+          font-size: 25px;
+        }
+        p{
+          font-family:'texgyreadventor-regular';
+          color:#000;
+          font-size:18px;
+          font-weight:lighter;
+        }
       }
     }
-  }
+    .tab-content{
+      height:311px;
+      border:1px solid $clefsdorBlue;
+    }
+}

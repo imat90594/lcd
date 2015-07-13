@@ -1,17 +1,53 @@
-<img src="/Data/Images/<?php echo $this->_XMLObj->play->image[0]->path?>" >
-<img src="/Data/Images/<?php echo $this->_XMLObj->eat->image[0]->path?>" >
-<img src="/Data/Images/<?php echo $this->_XMLObj->stay->image[0]->path?>" >
+<div class="cityGuideContainer">
+	<section class="container pBxxl pTxxl">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 concierge pBm">
+			<div class="row">
+				<hr class="col-lg-4 col-md-4 hidden-sm hidden-xs darkBlueBG">
+				<h1 class="text-center col-lg-3 col-md-3 col-sm-12 col-xs-12 cityGuide mLm">CITY GUIDE</h1>
+				<hr class="col-lg-4 col-md-4 paddingLeft hidden-sm hidden-xs darkBlueBG mLxs">
+			</div>
+			<div class="row guideContainer pTxxl">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<a href="#eat" id="linkScroll1">
+						<div class="circularImage img-responsive" style="background-image:url('/Data/Images/<?php echo $this->_XMLObj->play->image[0]->path?>');"></div>
+						<h1 class="text-center pTxl">EAT</h1>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<a href="#play" id="linkScroll2">
+						<div class="circularImage img-responsive" style="background-image:url('/Data/Images/<?php echo $this->_XMLObj->eat->image[0]->path?>');"></div>
+						<h1 class="text-center pTxl">PLAY</h1>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<a href="#stay" id="linkScroll3">
+						<div class="circularImage img-responsive" style="background-image:url('/Data/Images/<?php echo $this->_XMLObj->stay->image[0]->path?>');"></div>
+						<h1 class="text-center pTxl">STAY</h1>
+					</a>
+				</div>
+			</div>
+			<div class="listingsContainer col-lg-12 col-md-12 col-sm-12 col-xs-12 pTxxl">
+				<div class="eatContainer" id="eat">
+					<h1 class="pBxxl">EAT</h1>
+					<div class="pLxxl pBxxl">
+						<?php echo $this->displayElement("page_content_editor", 0);?>
+					</div>
+				</div>
+				<div class="playContainer" id="play">
+					<h1 class="pBxxl">PLAY</h1>
+					<div class="pLxxl pBxxl">
+						<?php echo $this->displayElement("page_content_editor", 1);?>
+					</div>
+				</div>
+				<div class="stayContainer" id="stay">
+					<h1 class="pBxxl">STAY</h1>
+					<div class="pLxxl pBxxl">
+						<?php echo $this->displayElement("page_content_editor", 2);?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 
-<h1>Eat</h1>
-<?php echo $this->displayElement("page_content_editor", 0);?>
-
-<br />
-
-<h1>Play</h1>
-<?php echo $this->displayElement("page_content_editor", 1);?>
-
-<br />
-
-<h1>Stay</h1>
-<?php echo $this->displayElement("page_content_editor", 2);?>
 

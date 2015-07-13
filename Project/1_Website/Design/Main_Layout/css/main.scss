@@ -48,12 +48,18 @@ body{
   -o-font-smoothing: antialiased;
 }
 
+.clefsdorBlue{
+  color:#15324D !important;
+}
+
+
+
 .darkBlueBG{
-  background-color:#112f7a !important;
+  background-color:#15324D !important;
 }
 
 .lightBlueBG{
-  background-color:#11308c !important;
+  background-color:#1A3F61 !important;
 }
 
 .whiteBG{
@@ -61,7 +67,7 @@ body{
 }
 
 #wrapper{
-  background-color:#112f7a;
+  background-color:#15324D;
   // background: rgba(40,124,214,1);
   // background: -moz-linear-gradient(top, rgba(40,124,214,1) 0%, rgba(17,47,122,1) 100%);
   // background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(40,124,214,1)), color-stop(100%, rgba(17,47,122,1)));
@@ -182,7 +188,9 @@ body{
   @include sprite(110.065px,40.354px,-217.891px, -53.176px,'no-hover',$sprites); 
 }
 
-
+#circle{
+  @include sprite(65.065px,58.354px,-225.891px, -101.176px,'no-hover',$sprites); 
+}
 // -----------------------------404------------------------
 #wrapper404{
   max-width:1200px;
