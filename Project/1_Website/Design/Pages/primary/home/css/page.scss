@@ -146,8 +146,12 @@
         margin-top:15px;
       }
       
-      .card_content p{
+      .card_content .ellipsis p{
         margin-top: 12px;
+      }
+      
+      .card_content .ellipsis{
+        height:200px;
       }
       
       .slide:hover .card_content {

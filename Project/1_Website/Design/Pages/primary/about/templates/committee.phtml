@@ -16,8 +16,10 @@
 				  	<img src="<?php echo $member["image_path"]?>">
 				  	<div class="card_content">
 					   <h2><?php echo $member["article_title"]?></h2>
-					   <p><?php echo $member["content"]?></p>
-					   <div class="text-center">
+					   <div class="ellipsis">
+					   		<p><?php echo $member["content"]?></p>
+					   </div>
+					   <div class="text-center pTl">
 					   	<a href="/members/view/<?php echo $member["permalink"]?>" id="seeMore"></a>
 					   </div>
 					</div>

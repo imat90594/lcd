@@ -12,8 +12,10 @@
 			  	<img src="<?php echo $hotel["image_path"]?>">
 			  	<div class="card_content">
 				   <h2><?php echo $hotel["article_title"]?></h2>
-				   <p><?php echo $hotel["hotel_description"]?></p>
-				   <div class="text-center">
+				   <div class="ellipsis">
+				   		<p><?php echo $hotel["hotel_description"]?></p>
+				   </div>
+				   <div class="text-center pTl">
 				   	<a href="/hotels/view/<?php echo $hotel["permalink"]?>" id="viewHotel"></a>
 				   </div>
 				</div>
