@@ -1,9 +1,15 @@
+
 /************************************** HOMEPAGE **************************************/
 @import 'C:/WORKSPACE/lcd/Project/1_Website/Design/Main_Layout/scss/core/global';
 
 .membersContainer{
   .profileContainer{
     min-height: 460px;
+    .descContainer{
+      h1{
+        color:$clefsdorYellow;
+      }
+    }
   }
   .whiteBG{
     min-height: 460px;
@@ -88,7 +94,8 @@
       }
       
       .card_content .ellipsis{
-        height:200px;
+        height:230px;
+        overflow:hidden;
       }
       
       .slide:hover .card_content {
