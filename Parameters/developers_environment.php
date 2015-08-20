@@ -60,7 +60,7 @@ define('HTTP_ACCESS_CORE','StarfishCore_V4');
 define('FILE_ACCESS_CORE','StarfishCore_V4');
 //====================================================================================================
 #for database connection
-define ('DATABASE_NAME', 'clefsdor');
+define ('DATABASE_NAME', 'lcd');
 define ('DATABASE_HOSTNAME', 'localhost');
 define ('DATABASE_USERNAME', 'root');
 define ('DATABASE_PASSWORD', '');
