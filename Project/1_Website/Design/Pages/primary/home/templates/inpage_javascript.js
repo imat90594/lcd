@@ -10,6 +10,10 @@ $(document).ready(function(){
 		interval: 1000 * 15
 	});
 	
+	$(".ellipsis").dotdotdot({
+
+	});
+	
 	$('.carousel').carousel({
 	});
 	

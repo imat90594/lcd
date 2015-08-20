@@ -1,7 +1,7 @@
 <div class="jumbotron" style="background-image:url('/Project/1_Website/Design/Main_Layout/images/backgrounds/about-us-banner.jpg')">
 </div>
 
-<div class="aboutContainer blackGradient">
+<div class="aboutContainer whiteBG">
 	<section class="container pBxxl pTxxl">
 		<div class="row">
 				<hr class="col-lg-3 col-md-3 col-sm-4 col-xs-4 hidden-sm hidden-xs">
@@ -16,9 +16,11 @@
 				  	<img src="<?php echo $member["image_path"]?>">
 				  	<div class="card_content">
 					   <h2><?php echo $member["article_title"]?></h2>
-					   <p><?php echo $member["content"]?></p>
-					   <div class="text-center">
-					   	<a href="/members/view/<?php echo $member["permalink"]?>" id="viewHotel"></a>
+					   <div class="ellipsis">
+					   		<p><?php echo $member["content"]?></p>
+					   </div>
+					   <div class="text-center pTl">
+					   	<a href="/members/view/<?php echo $member["permalink"]?>" id="seeMore"></a>
 					   </div>
 					</div>
 				  </div>

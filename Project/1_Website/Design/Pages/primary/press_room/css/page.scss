@@ -1,17 +1,59 @@
 /************************************** HOMEPAGE **************************************/
-@import 'C:/WORKSPACE/clefsdor/Project/1_Website/Design/Main_Layout/scss/core/global';
+@import 'C:/WORKSPACE/lcd/Project/1_Website/Design/Main_Layout/scss/core/global';
 
-.hotelsContainer{
+.pressContainer{
+  .pressInner{
+    h1{
+      font-family:'texgyreadventor-bold';
+      color:$clefsdorBlue;
+      font-weight:lighter;
+      font-size:25px;
+    }
+    p{
+      font-family:'texgyreadventor-regular';
+      color:$clefsdorBlue;
+      font-weight:lighter;
+      font-size:14px;
+    }
+    a{
+      font-family:'texgyreadventor-bold';
+            color:$clefsdorBlue;
+            font-size:14px;
+            line-height: 20px;
+            padding-left: 15px;
+    }
+  }
+  .featuresContainer{
+      h1{
+        a{
+          font-family:'texgyreadventor-bold';
+          color:$clefsdorBlue;
+          font-weight:lighter;
+          font-size:25px;
+          padding-left: 50px;
+          margin-right: 37px;
+        }
+      }
+    }
   section{
+    .descContainer{
+      height: 250px;
+      h1{
+        color:$clefsdorBlue;
+      }
+      p{
+       color:#000; 
+      }
+    }
     .slider1{
       height:1250px;
     }
     
       h1{
-        font-family:'AmplitudeExtraComp-Medium_3552';
-        color:#f1bc56;
+        font-family:'texgyreadventor-bold';
+        color:$clefsdorBlue;
         font-weight:lighter;
-        font-size:60px;
+        font-size:35px;
         padding-left: 50px;
         margin-right: 37px;
       }
@@ -23,7 +65,7 @@
         background-color: #f1bc56;
       }
       p{
-        font-family:'century-gothic-regular';
+        font-family:'texgyreadventor-regular';
         color:#fff;
         font-size:14px;
         text-align:center;
@@ -51,7 +93,7 @@
       }
       
       .card_content h2 {
-        font-family:'AmplitudeExtraComp-Medium_3552';
+        font-family:'texgyreadventor-bold';
         color:000;
         font-weight:lighter;
         font-size:35px;
@@ -67,5 +109,19 @@
       .slide:hover .card_content h2{
         margin-top:50px;
       }
+      .pressListings{
+        .perListing{
+          a{
+            font-family:'texgyreadventor-bold';
+            color:$clefsdorBlue;
+            font-size:14px;
+            line-height: 20px;
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+    h1{
+       color:$clefsdorBlue;
     }
   }

@@ -114,12 +114,16 @@ h6 {  font-size: 2.1em;  line-height: 18px; }
 $webfont-names:       AmplitudeExtraComp-Medium_3552,
                       Myriad Pro Regular,
                       century-gothic-regular,
-                      century-gothic-bold !default;
+                      century-gothic-bold, 
+                      texgyreadventor-regular,
+                      texgyreadventor-bold !default;
                     
 $webfont-family:      AmplitudeExtraComp-Medium_3552,
                       Myriad Pro Regular,
                       century-gothic-regular,
-                      century-gothic-bold !default;
+                      century-gothic-bold,
+                      texgyreadventor-regular,
+                      texgyreadventor-bold !default;
                       
   
  @for $i from 1 through length($webfont-names) {
