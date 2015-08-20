@@ -2,6 +2,9 @@
 //developers helper
 require_once "Data/Debugger/debug.php";
 
+date_default_timezone_set("Asia/Manila");
+
+
 //get server name
 $svn = $_SERVER['SERVER_NAME'];
 //get server address
